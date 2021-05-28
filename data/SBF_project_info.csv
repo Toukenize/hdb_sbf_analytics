@@ -1,0 +1,422 @@
+proj_id,precinct_name,town,Remaining_Lease,Est_Completion
+2021-05_SBF_QkJfTjFDMTVfMTYxOTUwOTg0NzQwMg,Sky Vista @ Bukit Batok,Bukit Batok,15 - 99 years,1/2022
+2021-05_SBF_QkJfTjFDOUFfMTYyMDIxMDYwMDEwNA,Bt Batok West Ave 8,Bukit Batok,63 years,Keys Available
+2021-05_SBF_QkJfTjJDMjFfMTYyMDQ1MzI0MDE0OA,Golden Daisy,Bukit Batok,15 - 45 years,Keys Available
+2021-05_SBF_QkJfTjJDMjNfMTYyMDM2MTMyMDM0Nw,Skyline II @ Bukit Batok,Bukit Batok,96 years,Keys Available
+2021-05_SBF_QkJfTjJDN18xNjIwMjEwNjAwMTA0,Bt Batok St 21,Bukit Batok,63 years,Keys Available
+2021-05_SBF_QkJfTjNDM18xNjIwMjEwNjAwMTA2,Bt Batok St 32,Bukit Batok,64 years,Keys Available
+2021-05_SBF_QkJfTjNDMTNfMTYxOTUwOTg0NzUwMg,Bukit Gombak Vista,Bukit Batok,15 - 45 years,Keys Available
+2021-05_SBF_QkJfTjRDMjJfMTYxOTUwOTg0NzY5Ng,West Scape @ Bukit Batok,Bukit Batok,15 - 99 years,8/2021 to 11/2021
+2021-05_SBF_QkJfTjRDMTBfMTYyMDM2MTMyMDM2OQ,West Rock @ Bukit Batok,Bukit Batok,98 years,Keys Available
+2021-05_SBF_QkJfTjRDMThfMTYxOTUwOTg0NzY2OA,West Plains @ Bukit Batok,Bukit Batok,15 - 99 years,Keys Available
+2021-05_SBF_QkJfTjRDMTJfMTYxOTUwOTg0NzU0NQ,West Quarry @ Bukit Batok,Bukit Batok,15 - 98 years,Keys Available
+2021-05_SBF_QkJfTjRDMTNfMTYyMDM2MTMyMDM3MQ,West Crest @ Bukit Batok,Bukit Batok,97 years,Keys Available
+2021-05_SBF_QkJfTjRDMTZfMTYyMDM2MTMyMDM3Mg,West Terra @ Bukit Batok,Bukit Batok,15 - 97 years,Keys Available
+2021-05_SBF_QkJfTjRDNV8xNjE5NTA5ODQ3NTA4,West Edge @ Bukit Batok,Bukit Batok,15 - 98 years,Keys Available
+2021-05_SBF_QkJfTjRDOF8xNjE5NTA5ODQ3NTI2,West Ridges @ Bukit Batok,Bukit Batok,15 - 97 years,Keys Available
+2021-05_SBF_QkJfTjVDMV8xNjIwMjEwNjAwMTI2,Hillgrove Gardens,Bukit Batok,66 years,Keys Available
+2021-05_SBF_QkJfTjVDNl8xNjIwMjEwNjAwMTI3,Guilin Breeze,Bukit Batok,65 years,Keys Available
+2021-05_SBF_QlBfTjJDMThfMTYyMDIxMDYwMDE5Nw,Petir Rd,Bukit Panjang,67 years,Keys Available
+2021-05_SBF_QlBfTjJDMTVfMTYyMDIxMDYwMDE5Ng,Pending Rd,Bukit Panjang,65 years,Keys Available
+2021-05_SBF_QlBfTjRDMTdfMTYyMDQ1NzAyMDEyNw,Fajar Spring,Bukit Panjang,15 - 45 years,Keys Available
+2021-05_SBF_QlBfTjRDMTJfMTYxOTUwOTg0ODI5NA,Segar Gardens,Bukit Panjang,81 years,Keys Available
+2021-05_SBF_QlBfTjRDMUFfMTYyMDIxMDYwMDE5Nw,Fajar Rd,Bukit Panjang,67 years,Keys Available
+2021-05_SBF_QlBfTjVDMTBfMTYyMDIxMDYwMDE5OA,Panshan Grove,Bukit Panjang,77 years,Keys Available
+2021-05_SBF_QlBfTjZDMTBfMTYyMDQ1NzAyMDEzMA,Senja Gateway,Bukit Panjang,15 - 45 years,Keys Available
+2021-05_SBF_QlBfTjZDMTJfMTYxOTUwOTg0ODM0MQ,Senja Heights,Bukit Panjang,99 years,10/2021
+2021-05_SBF_QlBfTjZDMTNfMTYxOTUwOTg0ODM1MQ,Senja Valley,Bukit Panjang,99 years,11/2021
+2021-05_SBF_QlBfTjZDMTVfMTYxOTUwOTg0ODQwMQ,Senja Ridges,Bukit Panjang,99 years,7/2021
+2021-05_SBF_QlBfTjZDOF8xNjIwMjEwNjAwMjAw,Senja Rd,Bukit Panjang,83 years,Keys Available
+2021-05_SBF_Q0NLX040QzE0XzE2MjA0NTcwMjAxNDk,Sunshine Court,Choa Chu Kang,15 - 45 years,Keys Available
+2021-05_SBF_Q0NLX040QzE1XzE2MjA0NTcwMjAxNTA,Sunshine Gardens,Choa Chu Kang,15 - 45 years,Keys Available
+2021-05_SBF_Q0NLX041QzEyXzE2MjA0NTcwMjAxNTE,Limbang Green,Choa Chu Kang,15 - 45 years,Keys Available
+2021-05_SBF_Q0NLX042QzEzXzE2MjAyMTA2MDAyMjI,Choa Chu Kang Cres,Choa Chu Kang,81 years,Keys Available
+2021-05_SBF_Q0NLX042QzNfMTYyMDIxMDYwMDIyMg,Choa Chu Kang St 62,Choa Chu Kang,75 years,Keys Available
+2021-05_SBF_Q0NLX044QzFfMTYyMDM2MTU2MDAzNg,Keat Hong Crest,Choa Chu Kang,96 years,Keys Available
+2021-05_SBF_Q0NLX044QzJfMTYyMDM2MTU2MDAzNw,Keat Hong Pride,Choa Chu Kang,95 years,Keys Available
+2021-05_SBF_Q0NLX044QzkxMF8xNjIwMzYxNTYwMDM5,Keat Hong Mirage,Choa Chu Kang,96 years,Keys Available
+2021-05_SBF_Q0NLX044QzRfMTYyMDM2MTU2MDAzNw,Keat Hong Axis,Choa Chu Kang,95 years,Keys Available
+2021-05_SBF_Q0NLX044QzZfMTYxOTUwOTg0ODU4OA,Keat Hong Colours,Choa Chu Kang,96 years,Keys Available
+2021-05_SBF_Q0NLX04xQzE2XzE2MTk1MDk4NDg1MTE,Teck Whye View,Choa Chu Kang,15 - 99 years,5/2022 to 6/2022
+2021-05_SBF_Q0NLX04xQzFCXzE2MjAyMTA2MDAyMTY,Teck Whye Heights II,Choa Chu Kang,56 years,Keys Available
+2021-05_SBF_Q0NLX04xQzFDXzE2MjAyMTA2MDAyMTc,Teck Whye Heights I,Choa Chu Kang,63 years,Keys Available
+2021-05_SBF_Q0NLX04yQzExXzE2MjAyMTA2MDAyMTg,Choa Chu Kang Ave 3,Choa Chu Kang,71 years,Keys Available
+2021-05_SBF_SEdfTjdDMV8xNjIwMjEwNjAwMjky,Hougang Ave 2,Hougang,64 years,Keys Available
+2021-05_SBF_SEdfTjFDMV8xNjIwNDU3MjAwMDkz,Paya Lebar Lodge,Hougang,15 - 45 years,Keys Available
+2021-05_SBF_SEdfTjFDMVVfMTYyMDIxMDYwMDI3Nw,Hougang Ave 1,Hougang,60 years,Keys Available
+2021-05_SBF_SEdfTjlDMjFfMTYyMDIxMDYwMDI5NA,Buangkok Woods,Hougang,15 - 99 years,Keys Available
+2021-05_SBF_SEdfTjlDMTBfMTYyMDIxMDYwMDI5Mw,Buangkok Cres,Hougang,82 years,Keys Available
+2021-05_SBF_SEdfTjlDMTVfMTYyMDIxMDYwMDI5Mw,Buangkok Court,Hougang,15 - 90 years,Keys Available
+2021-05_SBF_SEdfTjlDMTZfMTYyMDIxMDYwMDI5NA,Buangkok Square,Hougang,15 - 98 years,Keys Available
+2021-05_SBF_SEdfTjNDNEFfMTYyMDIxMDYwMDI3Nw,Hougang View,Hougang,56 years,Keys Available
+2021-05_SBF_SEdfTjRDOF8xNjIwMjEwNjAwMjc4,Hougang Ave 10,Hougang,71 years,Keys Available
+2021-05_SBF_SEdfTjVDMjNfMTYyMDQ1NzIwMDA5NQ,Golden Mint,Hougang,15 - 45 years,Keys Available
+2021-05_SBF_SEdfTjZDMTBBXzE2MjAyMTA2MDAyNzk,Hougang Ave 8,Hougang,65 years,Keys Available
+2021-05_SBF_SEdfTjZDMTJBXzE2MjAyMTA2MDAyODA,Hougang Ave 8,Hougang,65 years,Keys Available
+2021-05_SBF_SEdfTjZDMTVfMTYyMDIxMDYwMDI4MA,Hougang Spring,Hougang,66 years,Keys Available
+2021-05_SBF_SEdfTjZDOV8xNjIwMjEwNjAwMjc5,Hougang Ave 8,Hougang,66 years,Keys Available
+2021-05_SBF_SkVfTjJDM18xNjIwMjEwNjAwMjk1,Jurong East St 21,Jurong East,63 years,Keys Available
+2021-05_SBF_SkVfTjNDMTJfMTYyMDQ1NzIwMDEwMg,Golden Willows,Jurong East,15 - 45 years,Keys Available
+2021-05_SBF_SkVfTjRDM0NfMTYyMDIxMDYwMDI5Nw,Pandan Gdns,Jurong East,57 years,Keys Available
+2021-05_SBF_SkVfTjRDOV8xNjIwMjEwNjAwMjk3,Teban Gdns Rd,Jurong East,72 years,Keys Available
+2021-05_SBF_SldfTjdDMl8xNjIwMjEwNjAwMzI0,Jurong West St 71,Jurong West,69 years,Keys Available
+2021-05_SBF_SldfTjdDOF8xNjIwMjEwNjAwMzM2,Gek Poh Ville,Jurong West,71 years,Keys Available
+2021-05_SBF_SldfTjFDMjlCXzE2MjAzNjE4MDAxNjA,Yung Ho Spring I,Jurong West,15 - 98 years,Keys Available
+2021-05_SBF_SldfTjFDMzBfMTYyMDQ1NzIwMDEyNg,Corporation Tiara,Jurong West,15 - 45 years,Keys Available
+2021-05_SBF_SldfTjFDMzJfMTYxOTUwOTg0OTI5MA,Yung Ho Spring II,Jurong West,15 - 97 years,Keys Available
+2021-05_SBF_SldfTjFDOV8xNjIwMjEwNjAwMjk4,Corporation Court,Jurong West,49 years,Keys Available
+2021-05_SBF_SldfTjhDMl8xNjIwMjEwNjAwMzM3,Jurong West St 81,Jurong West,72 years,Keys Available
+2021-05_SBF_SldfTjhDNF8xNjIwMjEwNjAwMzM4,Jurong West St 81,Jurong West,74 years,Keys Available
+2021-05_SBF_SldfTjJDMTdfMTYyMDIxMDYwMDMwMg,Boon Lay View,Jurong West,97 years,Keys Available
+2021-05_SBF_SldfTjJDNV8xNjIwMjEwNjAwMzAx,Boon Lay Place,Jurong West,55 years,Keys Available
+2021-05_SBF_SldfTjlDMjBfMTYyMDIxMDYwMDMzOQ,Jurong West Jewel,Jurong West,99 years,5/2022 to 6/2022
+2021-05_SBF_SldfTjlDMTRfMTYyMDIxMDYwMDMzOQ,Jurong West St 93,Jurong West,87 years,Keys Available
+2021-05_SBF_SldfTjlDNF8xNjIwMjEwNjAwMzM4,Nanyang Emerald,Jurong West,67 years,Keys Available
+2021-05_SBF_SldfTjNDMzBCXzE2MjA0NTcyMDAxMjk,Kang Ching Rd,Jurong West,15 - 45 years,Keys Available
+2021-05_SBF_SldfTjRDM18xNjIwMjEwNjAwMzE3,Jurong West St 42,Jurong West,64 years,Keys Available
+2021-05_SBF_SldfTjRDMjFfMTYyMDQ1NzIwMDEzMQ,Golden Orchid,Jurong West,15 - 45 years,Keys Available
+2021-05_SBF_SldfTjRDOF8xNjIwMjEwNjAwMzE4,Jurong West St 42,Jurong West,63 years,Keys Available
+2021-05_SBF_SldfTjVDN18xNjIwMjEwNjAwMzIw,West Wood Court,Jurong West,62 years,Keys Available
+2021-05_SBF_SldfTjZDM18xNjIwMjEwNjAwMzIy,Jurong West Ctrl 1,Jurong West,79 years,Keys Available
+2021-05_SBF_SldfTjZDMTFfMTYyMDIxMDYwMDMyMw,Jurong West St 65,Jurong West,79 years,Keys Available
+2021-05_SBF_SldfTjZDMTZfMTYxOTUwOTg0OTQxMA,Jurong West St 65,Jurong West,80 years,Keys Available
+2021-05_SBF_SldfTjZDMV8xNjIwMjEwNjAwMzIx,Jurong West Ctrl 1,Jurong West,76 years,Keys Available
+2021-05_SBF_SldfTjZDNF8xNjIwMjEwNjAwMzIy,Jurong West St 64,Jurong West,79 years,Keys Available
+2021-05_SBF_UEdfUzFDMjJBXzE2MjAyMTA2MDAwMjM,Edgedale Plains,Punggol,83 years,Keys Available
+2021-05_SBF_UEdfUzFDMjRBXzE2MjAyMTA2MDAwMjQ,The Nautilus @ Punggol,Punggol,92 years,Keys Available
+2021-05_SBF_UEdfUzFDMjZfMTYyMDIxMDYwMDAyNA,Punggol Ctrl,Punggol,82 years,Keys Available
+2021-05_SBF_UEdfUzFDMTBfMTYyMDIxMDYwMDM2Mw,Edgedale Plains,Punggol,82 years,Keys Available
+2021-05_SBF_UEdfUzFDMTdfMTYyMDIxMDYwMDM2Nw,Punggol Field Walk,Punggol,82 years,Keys Available
+2021-05_SBF_UEdfUzFDMTJfMTYyMDIxMDYwMDM2NA,Punggol Field,Punggol,81 - 82 years,Keys Available
+2021-05_SBF_UEdfUzFDMTVfMTYyMDIxMDYwMDM2NA,Edgedale Plains,Punggol,82 years,Keys Available
+2021-05_SBF_UEdfUzFDMTZfMTYyMDIxMDYwMDM2Ng,Edgedale Plains,Punggol,81 years,Keys Available
+2021-05_SBF_UEdfUzFDMV8xNjIwMjEwNjAwMzYy,Edgefield Plains,Punggol,81 years,Keys Available
+2021-05_SBF_UEdfUzFDNl8xNjIwMjEwNjAwMzYz,Edgefield Plains,Punggol,82 years,Keys Available
+2021-05_SBF_UEdfUzFDOF8xNjIwMjEwNjAwMzYz,Punggol Ctrl,Punggol,82 years,Keys Available
+2021-05_SBF_UEdfUzJDMTlfMTYyMDQ1NzM4MDA1MA,Punggol Emerald,Punggol,15 - 45 years,Keys Available
+2021-05_SBF_UEdfUzJDMzdfMTYyMDM2MTkyMDE1Mg,The Verandah @ Matilda,Punggol,96 years,Keys Available
+2021-05_SBF_UEdfUzJDMzlfMTYyMDIxMTgwMDA2NA,Matilda Sundeck,Punggol,99 years,Keys Available
+2021-05_SBF_UEdfUzJDMzZfMTYxOTUwOTg0OTY1Nw,Matilda Edge,Punggol,15 - 97 years,Keys Available
+2021-05_SBF_UEdfUzNDMzFfMTYyMDM2MTkyMDE1NQ,Waterway Cascadia,Punggol,96 years,Keys Available
+2021-05_SBF_UEdfUzNDMzNfMTYyMDM2MTkyMDE1Ng,Punggol Bayview,Punggol,98 years,Keys Available
+2021-05_SBF_UEdfUzRDM18xNjE5NTA5ODQ5NzA1,Northshore Straitsview,Punggol,15 - 99 years,Keys Available
+2021-05_SBF_UEdfUzRDMl8xNjE5NTA5ODQ5Njc3,Waterfront II @ Northshore,Punggol,15 - 99 years,Keys Available
+2021-05_SBF_UEdfUzRDMTFfMTYxOTUwOTg0OTgwNQ,Punggol Point Crown,Punggol,15 - 99 years,7/2023 to 10/2023
+2021-05_SBF_UEdfUzRDMTNfMTYxOTUwOTg0OTg0Ng,Punggol Point Woods,Punggol,15 - 99 years,2/2023 to 4/2023
+2021-05_SBF_UEdfUzRDMTQtQzE1XzE2MTk1MDk4NDk4Njg,Punggol Point Cove,Punggol,15 - 99 years,2/2023 to 1/2024
+2021-05_SBF_UEdfUzRDMV8xNjE5NTA5ODQ5NjYy,Waterfront I @ Northshore,Punggol,99 years,Keys Available
+2021-05_SBF_UEdfUzRDN18xNjE5NTA5ODQ5NzE2,Northshore Residences II,Punggol,15 - 99 years,Keys Available
+2021-05_SBF_UEdfUzRDNF8xNjE5NTA5ODQ5NzA5,Northshore Cove,Punggol,15 - 99 years,9/2021
+2021-05_SBF_UEdfUzRDNl8xNjE5NTA5ODQ5NzEz,Northshore Residences I,Punggol,15 - 99 years,Keys Available
+2021-05_SBF_UEdfUzRDNV8xNjIwMjExODAwMDY4,Northshore Edge,Punggol,99 years,10/2021 to 11/2021
+2021-05_SBF_UEdfUzRDOF8xNjE5NTA5ODQ5Nzg3,Northshore Trio,Punggol,15 - 99 years,9/2021
+2021-05_SBF_UEdfUzZDMjBfMTYyMDIxMTgwMDEwNw,Damai Grove,Punggol,91 years,Keys Available
+2021-05_SBF_UEdfUzZDMjlfMTYyMDIxMTgwMDEwNw,Eastdale,Punggol,83 years,Keys Available
+2021-05_SBF_UEdfUzZDMzlCXzE2MjAzNjE5MjAwMjA,Waterway View,Punggol,97 years,Keys Available
+2021-05_SBF_UEdfUzZDMzVfMTYyMDM2MTkyMDE5Mw,Waterway Sunray,Punggol,97 years,Keys Available
+2021-05_SBF_UEdfUzZDMzZfMTYyMDIxMTgwMDEwOA,Waterway Sundew,Punggol,95 years,Keys Available
+2021-05_SBF_UEdfUzZDNDBfMTYyMDQ1NzM4MDA5Ng,Waterway Brooks,Punggol,15 - 45 years,Keys Available
+2021-05_SBF_UEdfUzZDNDhfMTYxOTUwOTg0OTg5NA,Waterway Sunrise II,Punggol,15 - 99 years,Now to 6/2021
+2021-05_SBF_UEdfUzZDNDlfMTYxOTUwOTg0OTkzMA,Waterway Sunrise I,Punggol,15 - 99 years,Keys Available
+2021-05_SBF_U0JfTjFDMl8xNjIwMzYzNDgwMDc4,Eastbrook @ Canberra,Sembawang,97 years,Keys Available
+2021-05_SBF_U0JfTjFDMTBfMTYyMDM2MzQ4MDA4MQ,Eastcrown @ Canberra,Sembawang,97 years,Keys Available
+2021-05_SBF_U0JfTjFDMTJfMTYxOTUwOTg1MDMyOA,Eastlink I @ Canberra,Sembawang,15 - 99 years,Keys Available
+2021-05_SBF_U0JfTjFDMTNfMTYxOTUwOTg1MDM0Mg,Eastglen @ Canberra,Sembawang,99 years,Keys Available
+2021-05_SBF_U0JfTjFDMV8xNjE5NTA5ODUwMjQ0,Eastcreek @ Canberra,Sembawang,15 - 99 years,Keys Available
+2021-05_SBF_U0JfTjFDN18xNjIwMzYzNDgwMDgw,Eastwave @ Canberra,Sembawang,96 years,Keys Available
+2021-05_SBF_U0JfTjFDNF8xNjIwMzYzNDgwMDc5,Eastlawn @ Canberra,Sembawang,96 years,Keys Available
+2021-05_SBF_U0JfTjFDNl8xNjE5NTA5ODUwMjk2,Eastlink II @ Canberra,Sembawang,98 years,Keys Available
+2021-05_SBF_U0JfTjFDOV8xNjE5NTA5ODUwMzAy,Eastdelta @ Canberra,Sembawang,98 years,Keys Available
+2021-05_SBF_U0JfTjJDM18xNjE5NTA5ODUwMzQ4,Canberra Vista,Sembawang,98 years,Keys Available
+2021-05_SBF_U0JfTjNDMTVfMTYyMDIxMjEwMDA5Ng,Sembawang Cres,Sembawang,78 years,Keys Available
+2021-05_SBF_U0JfTjNDN18xNjIwMzYzNDgwMDkz,Sun Breeze,Sembawang,97 years,Keys Available
+2021-05_SBF_U0JfTjRDNV8xNjE5NTA5ODUwNDEx,Blue Riverview,Sembawang,80 years,Keys Available
+2021-05_SBF_U0tfTjFDMjJfMTYyMDIxMjEwMDA5OA,Rivervale Cres,Sengkang,81 years,Keys Available
+2021-05_SBF_U0tfTjFDMTBfMTYyMDIxMjEwMDA5Nw,Rivervale Edge,Sengkang,79 years,Keys Available
+2021-05_SBF_U0tfTjFDMzBfMTYxOTUwOTg1MDQ1OA,Rivervale Shores,Sengkang,15 - 99 years,4/2022 to 9/2022
+2021-05_SBF_U0tfTjJDMTlfMTYxOTUwOTg1MDQ4Nw,Compassvale Green,Sengkang,80 years,Keys Available
+2021-05_SBF_U0tfTjJDMV8xNjIwMjEyMTAwMDk5,Compassvale Place,Sengkang,78 years,Keys Available
+2021-05_SBF_U0tfTjJDNDBfMTYyMDIxMjEwMDExMQ,Compassvale Ancilla,Sengkang,15 - 94 years,Keys Available
+2021-05_SBF_U0tfTjJDNDNBXzE2MjAzNjM0ODAxMDQ,Compassvale Cape,Sengkang,15 - 96 years,Keys Available
+2021-05_SBF_U0tfTjJDNDVfMTYyMDM2MzQ4MDEwNA,Compassvale Mast,Sengkang,95 years,Keys Available
+2021-05_SBF_U0tfTjNDM18xNjE5NTA5ODUwNTAx,Anchorvale Court,Sengkang,80 years,Keys Available
+2021-05_SBF_U0tfTjNDMjdfMTYyMDM2MzQ4MDEwNw,Anchorvale Parkview,Sengkang,96 years,Keys Available
+2021-05_SBF_U0tfTjNDMjhBXzE2MTk1MDk4NTA1MTM,Anchorvale Plains,Sengkang,15 - 99 years,Keys Available
+2021-05_SBF_U0tfTjNDMjhfMTYyMDM2MzQ4MDEwNw,Anchorvale Fields,Sengkang,97 years,Keys Available
+2021-05_SBF_U0tfTjNDMjlfMTYxOTUwOTg1MDUzMA,Anchorvale Village,Sengkang,15 - 99 years,1/2022
+2021-05_SBF_U0tfTjNDMThfMTYyMDIxMjEwMDExMg,Anchorvale Isles,Sengkang,94 years,Keys Available
+2021-05_SBF_U0tfTjNDMTlfMTYyMDQ1NzU2MDA3NA,Anchorvale Horizon,Sengkang,15 - 45 years,Keys Available
+2021-05_SBF_U0tfTjNDOF8xNjIwMjEyMTAwMTEy,Anchorvale Vista,Sengkang,81 years,Keys Available
+2021-05_SBF_U0tfTjRDMjdfMTYyMDIxMjEwMDExNw,Fernvale Rivergrove,Sengkang,15 - 95 years,Keys Available
+2021-05_SBF_U0tfTjRDMjJfMTYxOTUwOTg1MDU1MA,Fernvale Vines,Sengkang,15 - 99 years,11/2022 to 1/2023
+2021-05_SBF_U0tfTjRDMl8xNjIwMjEyMTAwMTE1,Coral Vale,Sengkang,83 years,Keys Available
+2021-05_SBF_U0tfTjRDMTJfMTYyMDIxMjEwMDExNQ,Fernvale Flora,Sengkang,94 years,Keys Available
+2021-05_SBF_U0tfTjRDMzBfMTYxOTUwOTg1MDU5NA,Fernvale Woods,Sengkang,15 - 99 years,Keys Available
+2021-05_SBF_U0tfTjRDMzFfMTYxOTUwOTg1MDYxMQ,Fernvale Glades,Sengkang,15 - 99 years,Now to 7/2021
+2021-05_SBF_U0tfTjRDMzlfMTYxOTUwOTg1MDcwMA,Fernvale Dew,Sengkang,15 - 99 years,2/2022 to 4/2022
+2021-05_SBF_U0tfTjRDNDFfMTYxOTUwOTg1MDcyMg,Fernvale Acres,Sengkang,99 years,Keys Available
+2021-05_SBF_VEdfRDFDMl8xNjE5NTA5ODUxNDkz,Plantation Grove,Tengah,15 - 99 years,4/2023 to 8/2023
+2021-05_SBF_VEdfRDFDMV8xNjE5NTA5ODUxMTE5,Plantation Village,Tengah,15 - 99 years,10/2022 to 1/2023
+2021-05_SBF_VEdfRDFDNF8xNjE5NTA5ODUxOTIx,Plantation Acres,Tengah,15 - 99 years,8/2022 to 12/2022
+2021-05_SBF_VEdfRDJDMl8xNjE5NTA5ODU0ODQ3,Garden Vale @ Tengah,Tengah,15 - 99 years,5/2023 to 8/2023
+2021-05_SBF_VEdfRDJDMV8xNjE5NTA5ODUyMDQ3,Garden Vines @ Tengah,Tengah,15 - 99 years,5/2023 to 8/2023
+2021-05_SBF_V0xfTjdDMjdfMTYyMDIxOTYwMDA4Mg,Woodlands Glade,Woodlands,15 - 99 years,10/2021
+2021-05_SBF_V0xfTjdDMjFfMTYyMDIxOTYwMDA4Mg,Woodlands Cres,Woodlands,76 years,Keys Available
+2021-05_SBF_V0xfTjdDMjlfMTYyMDM2Mzg0MDA0OA,Woodlands Pasture I,Woodlands,97 years,Keys Available
+2021-05_SBF_V0xfTjdDMl8xNjIwMjEyNDAwMDc2,Woodlands Dr 70,Woodlands,75 years,Keys Available
+2021-05_SBF_V0xfTjdDMTlfMTYyMDIxOTYwMDA4MQ,Woodlands Cres,Woodlands,76 years,Keys Available
+2021-05_SBF_V0xfTjdDMTRfMTYyMDIxMjQwMDA3Nw,Woodlands Circle,Woodlands,76 years,Keys Available
+2021-05_SBF_V0xfTjdDMzBfMTYyMDM2Mzg0MDA0OA,Woodlands Pasture II,Woodlands,97 years,Keys Available
+2021-05_SBF_V0xfTjdDMzJfMTYyMDQ1Nzc0MDAyMw,Golden Saffron,Woodlands,15 - 45 years,Keys Available
+2021-05_SBF_V0xfTjdDOF8xNjIwMjEyNDAwMDc3,Woodlands Circle,Woodlands,76 years,Keys Available
+2021-05_SBF_V0xfTjFDM18xNjIwMjEyNDAwMjU2,Woodlands St 13,Woodlands,63 years,Keys Available
+2021-05_SBF_V0xfTjFDMjVfMTYyMDIxMjQwMDI1OQ,Marsiling Grove,Woodlands,15 - 99 years,1/2022 to 3/2022
+2021-05_SBF_V0xfTjFDMjZfMTYyMDM2MzYwMDE4NA,Marsiling Greenview,Woodlands,15 - 98 years,Keys Available
+2021-05_SBF_V0xfTjFDMTlfMTYyMDIxMjQwMDI1OA,Marsiling Heights,Woodlands,15 - 94 years,Keys Available
+2021-05_SBF_V0xfTjFDN18xNjIwMjEyNDAwMjU3,Marsiling Rise,Woodlands,63 years,Keys Available
+2021-05_SBF_V0xfTjFDOV8xNjIwMjEyNDAwMjU3,Marsiling Rise,Woodlands,73 years,Keys Available
+2021-05_SBF_V0xfTjhDMjBfMTYyMDQ1ODEwMDA1OQ,Treegrove@woodlands,Woodlands,15 - 45 years,Keys Available
+2021-05_SBF_V0xfTjhDMl8xNjIwMjE5NjAwMDk2,Woodlands St 83,Woodlands,68 years,Keys Available
+2021-05_SBF_V0xfTjhDMThfMTYyMDIxOTYwMDA5Nw,Woodlands Dr 50,Woodlands,75 years,Keys Available
+2021-05_SBF_V0xfTjhDNUFfMTYyMDIxOTYwMDA5Nw,Woodlands St 83,Woodlands,74 years,Keys Available
+2021-05_SBF_V0xfTjJDMV8xNjIwMjEyNDAwMjYw,Marsiling Gardens,Woodlands,54 years,Keys Available
+2021-05_SBF_V0xfTjJDNV8xNjIwMjEyNDAwMjYw,Marsiling Green,Woodlands,56 years,Keys Available
+2021-05_SBF_V0xfTjNDMTRfMTYyMDQ1Nzc0MDI3NA,Woodlands Peak,Woodlands,15 - 45 years,Keys Available
+2021-05_SBF_V0xfTjVDMjFfMTYyMDIxMjQwMDA3Mw,Champions Court,Woodlands,15 - 45 years,Keys Available
+2021-05_SBF_V0xfTjVDMjRfMTYyMDIxMjQwMDA3Mw,Champions Green,Woodlands,15 - 99 years,8/2023 to 10/2023
+2021-05_SBF_V0xfTjVDMTVfMTYyMDIxMjQwMDI2Mw,Woodlands Dr 16,Woodlands,80 years,Keys Available
+2021-05_SBF_V0xfTjVDMTZfMTYyMDM2MzYwMDE5OQ,Woodlands Glen,Woodlands,97 years,Keys Available
+2021-05_SBF_V0xfTjVDNl8xNjIwMjEyNDAwMjYy,Woodlands Dr 16,Woodlands,79 years,Keys Available
+2021-05_SBF_V0xfTjZDMjJfMTYyMDM2Mzg0MDA0MQ,Admiralty Grove,Woodlands,97 years,Keys Available
+2021-05_SBF_V0xfTjZDMTdfMTYyMDIxMjQwMDA3Ng,Woodlands Ring Rd,Woodlands,77 years,Keys Available
+2021-05_SBF_V0xfTjZDMTlfMTYyMDIxMjQwMDA3Ng,Woodlands Dr 75,Woodlands,81 years,Keys Available
+2021-05_SBF_V0xfTjZDMTNfMTYyMDIxMjQwMDA3NQ,Woodlands Ring Rd,Woodlands,77 years,Keys Available
+2021-05_SBF_V0xfTjZDMV8xNjIwMjEyNDAwMDc0,Woodlands Dr 42,Woodlands,75 years,Keys Available
+2021-05_SBF_V0xfTjZDNV8xNjIwMjEyNDAwMDc1,Woodlands Dr 62,Woodlands,78 years,Keys Available
+2021-05_SBF_WVNfTjdDMl8xNjIwMjE5NjAwMDc2,Chong Pang Green,Yishun,63 years,Keys Available
+2021-05_SBF_WVNfTjdDMThfMTYyMDIxOTYwMDA4MA,Golden Palms,Yishun,15 - 45 years,Keys Available
+2021-05_SBF_WVNfTjdDMTRfMTYyMDIxOTYwMDA3OQ,Khatib Vale,Yishun,66 years,Keys Available
+2021-05_SBF_WVNfTjdDNl8xNjIwMjE5NjAwMDc4,Nee Soon Central Vista,Yishun,63 years,Keys Available
+2021-05_SBF_WVNfTjdDNV8xNjIwMjE5NjAwMDc4,Khatib Spring,Yishun,64 years,Keys Available
+2021-05_SBF_WVNfTjdDOF8xNjIwMjE5NjAwMDc5,Nee Soon Central Green,Yishun,63 years,Keys Available
+2021-05_SBF_WVNfTjFDMTVfMTYyMDIxOTYwMDA5OQ,Yishun Ring Rd,Yishun,66 years,Keys Available
+2021-05_SBF_WVNfTjFDNV8xNjIwMjE5NjAwMDk4,Chong Pang Vale,Yishun,62 years,Keys Available
+2021-05_SBF_WVNfTjFDOF8xNjIwMjE5NjAwMDk5,Chong Pang View,Yishun,63 years,Keys Available
+2021-05_SBF_WVNfTjJDNl8xNjIwMjE5NjAwMTAw,Yishun Hearts,Yishun,64 years,Keys Available
+2021-05_SBF_WVNfTjNDM18xNjIwMjE5NjAwMTAx,Yishun Rivergreen,Yishun,66 years,Keys Available
+2021-05_SBF_WVNfTjNDMjFfMTYxOTUwOTg1NTU5OA,Yishun Riverwalk,Yishun,15 - 45 years,Keys Available
+2021-05_SBF_WVNfTjNDMjNfMTYyMDQ1ODEwMDA2NA,Yishun Greenwalk,Yishun,15 - 45 years,Keys Available
+2021-05_SBF_WVNfTjNDMjVfMTYxOTUwOTg1NTYxNQ,Yishun Glen,Yishun,15 - 99 years,10/2021 to 4/2022
+2021-05_SBF_WVNfTjNDMTVfMTYyMDIxOTYwMDEwMQ,Yishun Ave 6,Yishun,67 years,Keys Available
+2021-05_SBF_WVNfTjNDMTZfMTYyMDIxOTYwMDEwMg,Yishun Ave 6,Yishun,67 years,Keys Available
+2021-05_SBF_WVNfTjRDMjBfMTYxOTUwOTg1NTY3NA,Forest Spring @ Yishun,Yishun,15 - 99 years,6/2021 to 8/2021
+2021-05_SBF_WVNfTjRDMjFBLUMyMUJfMTYxOTUwOTg1NTY4MQ,Melody Spring @ Yishun,Yishun,15 - 99 years,Now to 11/2021
+2021-05_SBF_WVNfTjRDMjJfMTYxOTUwOTg1NTcwMQ,Valley Spring @ Yishun,Yishun,15 - 99 years,Keys Available
+2021-05_SBF_WVNfTjRDMl8xNjIwMjE5NjAwMTA1,Yishun Ave 11,Yishun,67 years,Keys Available
+2021-05_SBF_WVNfTjRDMTdfMTYxOTUwOTg1NTYzNw,Blossom Spring @ Yishun,Yishun,15 - 98 years,Keys Available
+2021-05_SBF_WVNfTjRDMThfMTYxOTUwOTg1NTY0MA,Casa Spring @ Yishun,Yishun,15 - 99 years,7/2021 to 10/2021
+2021-05_SBF_WVNfTjRDMTlfMTYxOTUwOTg1NTY2OQ,Meadow Spring @ Yishun,Yishun,15 - 98 years,Keys Available
+2021-05_SBF_WVNfTjRDNF8xNjIwNDU4MTAwMDc4,Floral Spring @ Yishun,Yishun,15 - 45 years,Keys Available
+2021-05_SBF_WVNfTjRDNl8xNjIwMjE5NjAwMDUx,Jade Spring @ Yishun,Yishun,91 years,Keys Available
+2021-05_SBF_WVNfTjVDNF8xNjIwMjE5NjAwMDU5,Angsana Breeze @ Yishun,Yishun,96 years,Keys Available
+2021-05_SBF_WVNfTjZDMjBfMTYxOTUwOTg1NTcyNA,Park Grove @ Yishun,Yishun,97 years,Keys Available
+2021-05_SBF_WVNfTjZDMTdfMTYyMDIxOTYwMDA3NQ,Fern Grove @ Yishun,Yishun,97 years,Keys Available
+2021-05_SBF_WVNfTjZDNV8xNjIwMjE5NjAwMDU5,Yishun Ave 4,Yishun,66 years,Keys Available
+2021-05_SBF_WVNfTjZDOV8xNjIwMjE5NjAwMDc0,Yishun St 61,Yishun,71 years,Keys Available
+2021-05_SBF_QU1LX040QzE0XzE2MjAyMTA2MDAwNDc,Teck Ghee Grandeur,Ang Mo Kio,58 years,Keys Available
+2021-05_SBF_QU1LX040QzI1XzE2MjAyMTk2MDAxMjY,Teck Ghee Parkview,Ang Mo Kio,96 years,Keys Available
+2021-05_SBF_QU1LX040QzlfMTYyMDIxMDYwMDAzMQ,Chong Boon Rise,Ang Mo Kio,57 years,Keys Available
+2021-05_SBF_QU1LX041QzI2XzE2MTk1MDk4NDU2MDQ,Cheng San Court,Ang Mo Kio,15 - 97 years,Keys Available
+2021-05_SBF_QU1LX041QzIyXzE2MjAyMTA2MDAwNDg,Cheng San Crest,Ang Mo Kio,59 years,Keys Available
+2021-05_SBF_QU1LX041UkMxMl8xNjIwMjEwNjAwMDk4,City View @ Cheng San,Ang Mo Kio,81 years,Keys Available
+2021-05_SBF_QU1LX042QzdfMTYyMDIxMDYwMDEwMA,Ang Mo Kio 61,Ang Mo Kio,59 years,Keys Available
+2021-05_SBF_QU1LX042QzI4XzE2MjA0NTMyNDAxNDQ,Yio Chu Kang Vista,Ang Mo Kio,15 - 45 years,Keys Available
+2021-05_SBF_QU1LX042QzM0XzE2MTk1MDk4NDYwMDg,Yio Chu Kang Beacon,Ang Mo Kio,15 - 99 years,1/2024 to 2/2024
+2021-05_SBF_QU1LX04xQzdfMTYyMDIxMDYwMDAyNw,Kebun Baru Spring,Ang Mo Kio,57 years,Keys Available
+2021-05_SBF_QU1LX04xQzE0XzE2MjAyMTA2MDAwMjg,Kebun Baru Link 1,Ang Mo Kio,64 years,Keys Available
+2021-05_SBF_QU1LX04xQzEzXzE2MjAyMTA2MDAwMjg,Kebun Baru Link 2,Ang Mo Kio,59 years,Keys Available
+2021-05_SBF_QU1LX04xQzRfMTYyMDIxMDYwMDAyNw,Kebun Baru Heights,Ang Mo Kio,56 years,Keys Available
+2021-05_SBF_QU1LX04yQzFfMTYyMDIxMDYwMDAyOQ,Ang Mo Kio Ave 3,Ang Mo Kio,54 years,Keys Available
+2021-05_SBF_QU1LX04yQzMxXzE2MTk1MDk4NDMxNjE,Ang Mo Kio Court,Ang Mo Kio,15 - 99 years,Keys Available
+2021-05_SBF_QU1LX04zQzNfMTYyMDIxMDYwMDAzMQ,Teck Ghee Evergreen,Ang Mo Kio,56 years,Keys Available
+2021-05_SBF_QU1LX04zQzZfMTYyMDIxMDYwMDAzMQ,Ang Mo Kio 31,Ang Mo Kio,57 years,Keys Available
+2021-05_SBF_QkRfTjFDMjBfMTYyMDM2MTMyMDQzMg,Fengshan Greenville,Bedok,15 - 97 years,Keys Available
+2021-05_SBF_QkRfTjFDMTBfMTYyMDIxMDYwMDEyNw,Pearl Garden,Bedok,56 years,Keys Available
+2021-05_SBF_QkRfTjFDMTRfMTYyMDIxMDYwMDEyNw,Bedok Nth Rd,Bedok,56 - 64 years,Keys Available
+2021-05_SBF_QkRfTjFDMTVfMTYyMDIxMDYwMDEyOA,Bedok Nth St 4,Bedok,56 years,Keys Available
+2021-05_SBF_QkRfTjhDOV8xNjIwMjEwNjAwMTcy,Ping-an Gardens,Bedok,62 years,Keys Available
+2021-05_SBF_QkRfTjhSQzJfMTYyMDIxMDYwMDE3Mg,Ansar Garden,Bedok,75 years,Keys Available
+2021-05_SBF_QkRfTjJDMF8xNjIwMjEwNjAwMTI4,Bedok South Parkview,Bedok,57 years,Keys Available
+2021-05_SBF_QkRfTjRDNF8xNjIwMjEwNjAwMTUw,Rainbow Ville,Bedok,58 years,Keys Available
+2021-05_SBF_QkRfTjRDNFVfMTYyMDIxMDYwMDE1MQ,Bedok Nth Ave 2,Bedok,58 years,Keys Available
+2021-05_SBF_QkRfTjRDOF8xNjE5NTA5ODQ3OTgz,Bedok Beacon,Bedok,15 - 99 years,6/2021
+2021-05_SBF_QkRfTjRDOV8xNjE5NTA5ODQ4MDA3,Bedok North Woods,Bedok,99 years,Keys Available
+2021-05_SBF_QkRfTjVDMTdfMTYyMDQ1MzI0MDAxNw,Golden Oaks,Bedok,15 - 45 years,Keys Available
+2021-05_SBF_QkRfTjVDMTFfMTYyMDIxMDYwMDE1NQ,Bedok Nth St 3,Bedok,58 years,Keys Available
+2021-05_SBF_QkRfTjVDMTJBXzE2MjAyMTA2MDAxNTY,Bedok Nth St 3,Bedok,15 - 64 years,Keys Available
+2021-05_SBF_QkRfTjVDMTJfMTYyMDIxMDYwMDE1NQ,Bedok Nth St 3,Bedok,58 years,Keys Available
+2021-05_SBF_QkRfTjVDMTlfMTYxOTUwOTg0ODA5NQ,Bedok North Vale,Bedok,15 - 99 years,Keys Available
+2021-05_SBF_QkRfTjVDMTRfMTYyMDIxMDYwMDE1Ng,Bedok North Green,Bedok,59 years,Keys Available
+2021-05_SBF_QkRfTjVDOV8xNjIwMjEwNjAwMTU0,Bedok Nth Ave 1,Bedok,58 years,Keys Available
+2021-05_SBF_QkRfTjZDMl8xNjIwMjEwNjAwMTcx,Eunos Heights,Bedok,65 years,Keys Available
+2021-05_SBF_QkRfTjZDMS1DMl8xNjIwMjEwNjAwMTcx,Eunos Vista,Bedok,64 years,Keys Available
+2021-05_SBF_QkRfTjZDNl8xNjIwMjEwNjAwMTcy,Eunos Spring,Bedok,65 years,Keys Available
+2021-05_SBF_QkhfTjFDMTFfMTYyMDIxMDYwMDE3Mw,Bishan St 13,Bishan,66 years,Keys Available
+2021-05_SBF_QkhfTjFDMzJfMTYyMDIxMDYwMDE3NA,Golden Jasmine,Bishan,15 - 45 years,Keys Available
+2021-05_SBF_QkhfTjJDMjBBXzE2MjAyMTA2MDAxNzU,Bishan St 22,Bishan,71 years,Keys Available
+2021-05_SBF_QkhfTjJDMjVfMTYyMDIxMDYwMDE3NQ,Bishan St 24,Bishan,71 years,Keys Available
+2021-05_SBF_QkhfTjNDMl8xNjIwMjEwNjAwMTc2,Sin Ming Ville,Bishan,52 years,Keys Available
+2021-05_SBF_QkhfTjRDM18xNjIwMjEwNjAwMTc2,Sin Ming Garden,Bishan,64 years,Keys Available
+2021-05_SBF_Qk1fTjFDMTlDXzE2MjA0NTcwMjAwOTg,Depot Heights,Bukit Merah,15 - 45 years,Keys Available
+2021-05_SBF_Qk1fTjFDMzlfMTYyMDQ1NzAyMDA5OQ,Telok Blangah Towers,Bukit Merah,15 - 45 years,Keys Available
+2021-05_SBF_Qk1fTjFDN18xNjIwMzYxNTYwMDkz,Telok Blangah Dr,Bukit Merah,15 - 56 years,Keys Available
+2021-05_SBF_Qk1fTjFDNTBfMTYyMDM2MTU2MDExNw,Telok Blangah Parcview,Bukit Merah,15 - 97 years,Keys Available
+2021-05_SBF_Qk1fTjFDNTJfMTYyMDM2MTU2MDExOA,Telok Blangah Ridgeview,Bukit Merah,95 years,Keys Available
+2021-05_SBF_Qk1fTjhDNl8xNjIwMjEwNjAwMTk2,Brickworks Estate,Bukit Merah,15 - 46 years,Keys Available
+2021-05_SBF_Qk1fTjJDM18xNjIwMjEwNjAwMTc4,Telok Blangah Rise,Bukit Merah,54 years,Keys Available
+2021-05_SBF_Qk1fTjJDNEFfMTYyMDIxMDYwMDE3OA,Telok Blangah Cres,Bukit Merah,53 years,Keys Available
+2021-05_SBF_Qk1fTjJSQzIwXzE2MjAyMTA2MDAxNzk,Mount Faber View,Bukit Merah,80 years,Keys Available
+2021-05_SBF_Qk1fTjNDM18xNjIwMjEwNjAwMTc5,Bukit Purmei Ville,Bukit Merah,62 years,Keys Available
+2021-05_SBF_Qk1fTjRSQzQwXzE2MjAyMTA2MDAxNzk,Kim Tian Green,Bukit Merah,15 - 91 years,Keys Available
+2021-05_SBF_Qk1fTjVDMC1DM18xNjIwMjEwNjAwMTgw,Bukit Ho Swee View,Bukit Merah,15 - 50 years,Keys Available
+2021-05_SBF_Qk1fTjVDN18xNjIwMjEwNjAwMTgw,The Beo Crescent,Bukit Merah,15 - 48 years,Keys Available
+2021-05_SBF_Qk1fTjVSMzdCXzE2MjA0NTcwMjAxMjI,Tiong Bahru View,Bukit Merah,15 - 45 years,Keys Available
+2021-05_SBF_Qk1fTjVSQzIzXzE2MjA0NTcwMjAxMjM,Havelock View,Bukit Merah,15 - 45 years,Keys Available
+2021-05_SBF_Qk1fTjZSQzUzXzE2MjAyMTA2MDAxOTU,City Vue @henderson,Bukit Merah,15 - 97 years,Keys Available
+2021-05_SBF_Q0xfTjdDM18xNjIwMjEwNjAwMjQx,Clementi West St 2,Clementi,59 years,Keys Available
+2021-05_SBF_Q0xfTjdDN18xNjIwMjEwNjAwMjQy,Clementi West St 2,Clementi,62 years,Keys Available
+2021-05_SBF_Q0xfTjFDM18xNjIwMjEwNjAwMjM2,Sunset Way Residence,Clementi,63 years,Keys Available
+2021-05_SBF_Q0xfTjhDMV8xNjE5NTA5ODQ4NzY2,West Coast Parkview,Clementi,15 - 99 years,9/2022
+2021-05_SBF_Q0xfTjJDM18xNjE5NTA5ODQ4NjA0,Clementi Northarc,Clementi,99 years,3/2022 to 4/2022
+2021-05_SBF_Q0xfTjNDM0EtQzNCXzE2MjAyMTA2MDAyMzc,Clementi Meadows,Clementi,57 - 58 years,Keys Available
+2021-05_SBF_Q0xfTjNDMThCXzE2MTk1MDk4NDg2NzU,Clementi Ridges,Clementi,96 years,Keys Available
+2021-05_SBF_Q0xfTjNDOEFfMTYyMDIxMDYwMDIzOA,Clementi Ave 5,Clementi,57 years,Keys Available
+2021-05_SBF_Q0xfTjNDOUJfMTYyMDIxMDYwMDIzOA,Clementi Ave 5,Clementi,58 years,Keys Available
+2021-05_SBF_Q0xfTjRDMTJfMTYxOTUwOTg0ODcyNg,Clementi Peaks,Clementi,99 years,5/2022 to 6/2022
+2021-05_SBF_Q0xfTjRDOF8xNjE5NTA5ODQ4Njk4,Casa Clementi,Clementi,15 - 92 years,Keys Available
+2021-05_SBF_R0xfTjFDM0FfMTYyMDIxMDYwMDI0Mw,Macpherson Oasis,Geylang,48 years,Keys Available
+2021-05_SBF_R0xfTjFDMl8xNjIwMjEwNjAwMjQz,Macpherson Garden,Geylang,47 years,Keys Available
+2021-05_SBF_R0xfTjFDNDNCXzE2MTk1MDk4NDg4MTM,Macpherson Spring,Geylang,15 - 45 years,Keys Available
+2021-05_SBF_R0xfTjFDOUFfMTYyMDIxMDYwMDI0NA,Balam Gardens,Geylang,45 years,Keys Available
+2021-05_SBF_R0xfTjNDMjhfMTYyMDM2MTgwMDA1Mg,Greentops @ Sims Place,Geylang,15 - 95 years,Keys Available
+2021-05_SBF_R0xfTjRDMEFfMTYyMDIxMDYwMDI0Ng,Cassia Cres,Geylang,64 years,Keys Available
+2021-05_SBF_R0xfTjRDMTVfMTYxOTUwOTg0ODg4MQ,Dakota Breeze,Geylang,15 - 99 years,Now to 6/2021
+2021-05_SBF_R0xfTjRDMUFfMTYxOTUwOTg0ODg0MQ,Pine Vista,Geylang,15 - 99 years,Keys Available
+2021-05_SBF_R0xfTjRDMV8xNjE5NTA5ODQ4ODM2,Cassia Cres,Geylang,96 years,Keys Available
+2021-05_SBF_R0xfTjZDMjlfMTYxOTUwOTg0OTA5OQ,Ubi Grove,Geylang,15 - 99 years,10/2021 to 1/2022
+2021-05_SBF_R0xfTjZDMzhfMTYyMDIxMDYwMDI3NQ,Kampong Ubi Greenville,Geylang,64 years,Keys Available
+2021-05_SBF_R0xfTjZDMzRfMTYyMDIxMDYwMDI3NQ,Kampong Ubi View,Geylang,64 years,Keys Available
+2021-05_SBF_S1dOX040QzIxXzE2MTk1MDk4NDk0OTc,St George's Towers,Kallang/Whampoa,15 - 98 years,Keys Available
+2021-05_SBF_S1dOX040QzNfMTYyMDIxMDYwMDM0Mg,St George's West Gardens,Kallang/Whampoa,60 years,Keys Available
+2021-05_SBF_S1dOX041QzIwQ18xNjIwNDU3MjAwMDU5,Mcnair Towers,Kallang/Whampoa,15 - 45 years,Keys Available
+2021-05_SBF_S1dOX041QzQzXzE2MTk1MDk4NDk1MjY,Towner Crest,Kallang/Whampoa,99 years,8/2023
+2021-05_SBF_S1dOX041QzRfMTYyMDIxMDYwMDM0Mw,Bendemeer Ville,Kallang/Whampoa,50 years,Keys Available
+2021-05_SBF_S1dOX041QzU4XzE2MTk1MDk4NDk1NDc,Kempas Residences,Kallang/Whampoa,15 - 99 years,6/2024 to 7/2024
+2021-05_SBF_S1dOX042QzI4Ql8xNjE5NTA5ODQ5NTc2,Tenteram Peak,Kallang/Whampoa,96 years,Keys Available
+2021-05_SBF_S1dOX043QzEwXzE2MjA0NTcyMDAwNjQ,Whampoa Dew,Kallang/Whampoa,15 - 45 years,Keys Available
+2021-05_SBF_S1dOX043QzFfMTYyMDIxMDYwMDM0Ng,Whampoa Spring,Kallang/Whampoa,52 years,Keys Available
+2021-05_SBF_S1dOX043QzVfMTYyMDIxMDYwMDM2MA,Whampoa View,Kallang/Whampoa,52 years,Keys Available
+2021-05_SBF_S1dOX04xUkM0NV8xNjE5NTA5ODQ5NDMw,Farrer Park View,Kallang/Whampoa,83 years,Keys Available
+2021-05_SBF_S1dOX04zQzFfMTYyMDIxMDYwMDM0MA,Lor 3 Geylang,Kallang/Whampoa,68 years,Keys Available
+2021-05_SBF_S1dOX04zQzIzQl8xNjE5NTA5ODQ5NDM4,Kallang Trivista,Kallang/Whampoa,15 - 96 years,Keys Available
+2021-05_SBF_S1dOX04zQzQ3XzE2MTk1MDk4NDk0NTU,Kallang Residences,Kallang/Whampoa,99 years,6/2021
+2021-05_SBF_TVBfTjJDMV8xNjIwMjEwNjAwMzYx,Marine Terrace Walk,Marine Parade,53 years,Keys Available
+2021-05_SBF_UFJDX040QzdfMTYyMDIxMTgwMDE0MA,Pasir Ris Dr 4,Pasir Ris,71 years,Keys Available
+2021-05_SBF_UFJDX041QzE1XzE2MjAyMTE4MDAxNDE,Elias Parks Estate,Pasir Ris,72 years,Keys Available
+2021-05_SBF_UFJDX041QzNfMTYyMDIxMTgwMDE0MA,Pasir Ris St 51,Pasir Ris,72 years,Keys Available
+2021-05_SBF_UFJDX041UEgxXzE2MjAyMTE4MDAxNDI,Pasir Ris One,Pasir Ris,93 years,Keys Available
+2021-05_SBF_UFJDX042QzJfMTYyMDIxMTgwMDE0Mg,Elias View,Pasir Ris,73 years,Keys Available
+2021-05_SBF_UFJDX04xQzEwXzE2MjAyMTE4MDAxMzg,Pasir Ris St 11,Pasir Ris,73 years,Keys Available
+2021-05_SBF_UFJDX04xQzNfMTYyMDIxMTgwMDEzNw,Pasir Ris St 11,Pasir Ris,72 years,Keys Available
+2021-05_SBF_UFJDX04xQzVfMTYyMDIxMTgwMDEzNw,Pasir Ris St 11,Pasir Ris,67 years,Keys Available
+2021-05_SBF_UFJDX04xQzZBXzE2MjAyMTE4MDAxMzg,Pasir Ris St 11,Pasir Ris,68 years,Keys Available
+2021-05_SBF_UFJDX04yQzFBXzE2MjAyMTE4MDAxMzk,Pasir Ris Dr 4,Pasir Ris,72 years,Keys Available
+2021-05_SBF_UFJDX04yQzlfMTYyMDQ1NzM4MDEyMA,Golden Lily,Pasir Ris,15 - 45 years,Keys Available
+2021-05_SBF_UVRfTjdSQzIxXzE2MjAyMTE4MDAwNjE,Dover Gardens,Queenstown,90 years,Keys Available
+2021-05_SBF_UVRfTjFDM18xNjE5NTA5ODUwMTA0,Skyresidence @ Dawson,Queenstown,15 - 99 years,Keys Available
+2021-05_SBF_UVRfTjFDMl8xNjIwNDU3MzgwMTM5,Skyterrace @ Dawson,Queenstown,15 - 45 years,Keys Available
+2021-05_SBF_UVRfTjFDN18xNjE5NTA5ODUwMTc0,Forfar Heights,Queenstown,15 - 99 years,Keys Available
+2021-05_SBF_UVRfTjFDNV8xNjE5NTA5ODUwMTY2,Skyparc @ Dawson,Queenstown,15 - 99 years,Keys Available
+2021-05_SBF_UVRfTjFSQzE3XzE2MjA0NTczODAwMjI,Strathmore Green,Queenstown,15 - 45 years,Keys Available
+2021-05_SBF_UVRfTjNDM18xNjIwMjExODAwMTY3,Commonwealth 16,Queenstown,15 - 45 years,Keys Available
+2021-05_SBF_UVRfTjRSQzI2XzE2MTk1MDk4NTAyMDE,Commonwealth View,Queenstown,15 - 45 years,Keys Available
+2021-05_SBF_UVRfTjVDMV8xNjIwMjExODAwMDU0,Holland Ave,Queenstown,52 years,Keys Available
+2021-05_SBF_UVRfTjVDNV8xNjIwMjExODAwMDU2,Holland Cl,Queenstown,52 years,Keys Available
+2021-05_SBF_UVRfTjVSQzI0XzE2MjAyMTE4MDAwNTY,Buona Vista Court,Queenstown,91 years,Keys Available
+2021-05_SBF_UVRfTjZDMi1DNF8xNjIwMjExODAwMDU3,Ghim Moh Gardens,Queenstown,55 years,Keys Available
+2021-05_SBF_UVRfTjZSMjVBXzE2MjAzNjM0ODAwNTA,Ghim Moh Edge,Queenstown,15 - 97 years,Keys Available
+2021-05_SBF_UVRfTjZSQzI1XzE2MjAyMTE4MDAwNTk,Ghim Moh Valley,Queenstown,15 - 91 years,Keys Available
+2021-05_SBF_U0dOX041QzE0XzE2MjAyMTIxMDAwOTc,Serangoon Nth Ave 4,Serangoon,71 years,Keys Available
+2021-05_SBF_U0dOX04yQzNfMTYyMDIxMjEwMDA5Nw,Serangoon Green,Serangoon,64 years,Keys Available
+2021-05_SBF_VEFQX040QzE1XzE2MjAyMTIxMDAwNjU,Tampines St 42,Tampines,66 years,Keys Available
+2021-05_SBF_VEFQX040QzE3XzE2MjAyMTIxMDAwNjY,Tampines Ave 9,Tampines,72 years,Keys Available
+2021-05_SBF_VEFQX040QzE5XzE2MjAyMTIxMDAwNjY,Tampines St 45,Tampines,72 years,Keys Available
+2021-05_SBF_VEFQX040QzEwXzE2MjAyMTIxMDAwNjQ,Sun Plaza View,Tampines,64 years,Keys Available
+2021-05_SBF_VEFQX040QzEzXzE2MjAyMTIxMDAwNjQ,Tampines St 44,Tampines,65 years,Keys Available
+2021-05_SBF_VEFQX040QzI3XzE2MjA0NTc1NjAxMTg,Tampines Alcoves,Tampines,15 - 45 years,Keys Available
+2021-05_SBF_VEFQX041UEgyXzE2MjAyMTIxMDAwNjg,Centrale 8 At Tampines,Tampines,93 years,Keys Available
+2021-05_SBF_VEFQX042QzE5XzE2MTk1MDk4NTA4OTE,Tampines Greendew,Tampines,99 years,7/2021 to 8/2021
+2021-05_SBF_VEFQX042QzFBXzE2MTk1MDk4NTA4MTM,Tampines Greenridges,Tampines,98 years,Keys Available
+2021-05_SBF_VEFQX042QzhfMTYxOTUwOTg1MDg0OQ,Tampines Greenverge,Tampines,99 years,Keys Available
+2021-05_SBF_VEFQX042QzIwXzE2MTk1MDk4NTA4OTg,Tampines Greenfoliage,Tampines,99 years,7/2021 to 8/2021
+2021-05_SBF_VEFQX042QzJBXzE2MjAzNjM2MDAyMDY,Tampines Greenweave,Tampines,15 - 99 years,Keys Available
+2021-05_SBF_VEFQX042QzJCXzE2MTk1MDk4NTA4MjI,Tampines Greenview,Tampines,99 years,Keys Available
+2021-05_SBF_VEFQX042QzRfMTYxOTUwOTg1MDgyNw,Tampines Greenglen,Tampines,99 years,2/2023 to 4/2023
+2021-05_SBF_VEFQX043QzdfMTYyMDIxMjQwMDEwMA,Tampines Courtview,Tampines,76 years,Keys Available
+2021-05_SBF_VEFQX043QzNfMTYyMDIxMjQwMDEwMA,Tampines Sunrise,Tampines,76 years,Keys Available
+2021-05_SBF_VEFQX044QzI2XzE2MjA0NTc1NjAwMjQ,Tampines Greenwood,Tampines,15 - 45 years,Keys Available
+2021-05_SBF_VEFQX044QzItQzNCXzE2MjAyMTI0MDAxMDE,Tampines Polyview,Tampines,62 - 63 years,Keys Available
+2021-05_SBF_VEFQX044QzIyQV8xNjIwMjEyNDAwMTAy,Tampines Vista,Tampines,67 years,Keys Available
+2021-05_SBF_VEFQX044QzMyQl8xNjE5NTA5ODUxMDEw,Tampines Greenflora,Tampines,99 years,Keys Available
+2021-05_SBF_VEFQX044QzMyQV8xNjE5NTA5ODUxMDA2,Tampines Greenbloom,Tampines,99 years,Keys Available
+2021-05_SBF_VEFQX044QzRDXzE2MjA0NTc1NjAwMjM,Golden Pines,Tampines,15 - 45 years,Keys Available
+2021-05_SBF_VEFQX045QzE4XzE2MTk1MDk4NTEwMjU,Tampines Greengem,Tampines,99 years,1/2023 to 4/2023
+2021-05_SBF_VEFQX04wQzNfMTYyMDIxMjEwMDEyOA,Simei St 1,Tampines,66 years,Keys Available
+2021-05_SBF_VEFQX04wQzRfMTYyMDIxMjEwMDEyOA,Simei St 1,Tampines,66 years,Keys Available
+2021-05_SBF_VEFQX04xQzEzXzE2MjA0NTc1NjAxMDA,Golden Carnation,Tampines,15 - 45 years,Keys Available
+2021-05_SBF_VEFQX04yQzE0XzE2MjAyMTIxMDAwNjI,Tampines St 21,Tampines,63 years,Keys Available
+2021-05_SBF_VEFQX04yQzJBXzE2MjAyMTIxMDAwNjA,Tampines St 21,Tampines,62 years,Keys Available
+2021-05_SBF_VEFQX04yQzZfMTYyMDIxMjEwMDA2MQ,Tampines St 22,Tampines,63 years,Keys Available
+2021-05_SBF_VEFQX04zQzE0XzE2MjAyMTIxMDAwNjM,Tampines St 34,Tampines,74 years,Keys Available
+2021-05_SBF_VFBfTjdDN18xNjIwMjEyNDAwMjM2,Potong Pasir Ave 1,Toa Payoh,63 years,Keys Available
+2021-05_SBF_VFBfTjFDN18xNjIwMjEyNDAwMjEy,Kim Keat Palm,Toa Payoh,49 years,Keys Available
+2021-05_SBF_VFBfTjhDNl8xNjIwMjEyNDAwMjM2,Joo Seng Heights,Toa Payoh,62 years,Keys Available
+2021-05_SBF_VFBfTjJSQzMyXzE2MjAyMTI0MDAyMTQ,Golden Lotus,Toa Payoh,15 - 45 years,Keys Available
+2021-05_SBF_VFBfTjlDM18xNjE5NTA5ODU1NDE3,Alkaff Lakeview,Toa Payoh,99 years,Keys Available
+2021-05_SBF_VFBfTjlDMTBfMTYxOTUwOTg1NTQ4MQ,Woodleigh Hillside,Toa Payoh,15 - 99 years,1/2022 to 6/2022
+2021-05_SBF_VFBfTjlDMV8xNjE5NTA5ODU1NDEz,Alkaff Courtview,Toa Payoh,15 - 99 years,Keys Available
+2021-05_SBF_VFBfTjlDNF8xNjIwMzYzNjAwNDMx,Alkaff Vista,Toa Payoh,99 years,Keys Available
+2021-05_SBF_VFBfTjlDNi1DN18xNjE5NTA5ODU1NDQz,Alkaff Oasis,Toa Payoh,15 - 99 years,Keys Available
+2021-05_SBF_VFBfTjlDOF8xNjE5NTA5ODU1NDY1,Woodleigh Glen,Toa Payoh,99 years,6/2021 to 9/2021
+2021-05_SBF_VFBfTjRDMjhfMTYyMDQ1Nzc0MDE3Ng,Toa Payoh Crest,Toa Payoh,15 - 45 years,Keys Available
+2021-05_SBF_VFBfTjRDMTRfMTYyMDIxMjQwMDIxNQ,Toa Payoh Green,Toa Payoh,15 - 50 years,Keys Available
+2021-05_SBF_VFBfTjRDMzBfMTYxOTUwOTg1NTA5OQ,Toa Payoh Ridge,Toa Payoh,15 - 99 years,7/2025
+2021-05_SBF_VFBfTjZDMjRfMTYyMDQ1Nzc0MDIxMg,Golden Clover,Toa Payoh,15 - 45 years,Keys Available
+2021-05_SBF_VFBfTjZDMjVfMTYxOTUwOTg1NTI1OQ,Kim Keat Beacon,Toa Payoh,99 years,6/2022 to 7/2022
+2021-05_SBF_VFBfTjZDMjZBXzE2MTk1MDk4NTUyOTc,Kim Keat Ripples,Toa Payoh,15 - 99 years,12/2024 to 1/2025
+2021-05_SBF_VFBfTjZDMl8xNjIwMjEyNDAwMjE5,Kim Keat Link,Toa Payoh,67 years,Keys Available
+2021-05_SBF_QkJfTjJDMjJfMTYxOTUwOTg0NzQzNg,Skypeak @ Bukit Batok,Bukit Batok,97 years,Keys Available
+2021-05_SBF_QlBfTjZDM18xNjE5NTA5ODQ4MzE3,Senja Rd,Bukit Panjang,80 years,Keys Available
+2021-05_SBF_Q0NLX04zQzNfMTYyMDIxMDYwMDIxOQ,Choa Chu Kang Loop,Choa Chu Kang,72 years,Keys Available
+2021-05_SBF_SEdfTjNDMTNfMTYyMDIxMDYwMDI3OA,Hougang Rivercourt,Hougang,99 years,Keys Available
+2021-05_SBF_SkVfTjJDMjJfMTYyMDIxMDYwMDI5NQ,Toh Guan Rd,Jurong East,77 years,Keys Available
+2021-05_SBF_SldfTjJDMjBfMTYxOTUwOTg0OTMwMA,Boon Lay Glade,Jurong West,15 - 99 years,9/2022 to 11/2022
+2021-05_SBF_UEdfUzJDMTRfMTYyMDQ1NzM4MDA1MA,Punggol Ripples,Punggol,15 - 45 years,Keys Available
+2021-05_SBF_U0JfTjNDMTRfMTYyMDIxMjEwMDA5NQ,Sembawang Cl,Sembawang,78 years,Keys Available
+2021-05_SBF_U0tfTjJDNDJfMTYyMDQ1NzU2MDA3MQ,Compassvale Helm,Sengkang,15 - 45 years,Keys Available
+2021-05_SBF_VEdfRDFDM18xNjE5NTA5ODUxNTgx,Plantation Grange,Tengah,15 - 99 years,8/2022 to 12/2022
+2021-05_SBF_V0xfTjJDOF8xNjIwMjEyNDAwMjYx,Marsiling Admiralty Park,Woodlands,59 years,Keys Available
+2021-05_SBF_WVNfTjJDNF8xNjIwMjE5NjAwMTAw,Yishun Gardens,Yishun,64 years,Keys Available
+2021-05_SBF_QU1LX04yQzlfMTYyMDIxMDYwMDAyOQ,Kebun Baru Palm View,Ang Mo Kio,56 years,Keys Available
+2021-05_SBF_QkRfTjJDMTFfMTYxOTUwOTg0NzkzNQ,Bedok South Horizon,Bedok,15 - 99 years,Keys Available
+2021-05_SBF_QkhfTjFDN0JfMTYyMDIxMDYwMDE3Mw,Bishan St 12,Bishan,65 years,Keys Available
+2021-05_SBF_Qk1fTjZSQzQ4XzE2MjA0NTcwMjAxMjM,Golden Tulip,Bukit Merah,15 - 45 years,Keys Available
+2021-05_SBF_Q0xfTjRDMTFfMTYxOTUwOTg0ODcwOQ,Clementi Crest,Clementi,99 years,Keys Available
+2021-05_SBF_R0xfTjVDMjZBXzE2MTk1MDk4NDg5MTg,Eunos Court,Geylang,15 - 99 years,4/2022 to 6/2022
+2021-05_SBF_S1dOX04zQzU3XzE2MTk1MDk4NDk0NjI,Kallang Breeze,Kallang/Whampoa,99 years,8/2022
+2021-05_SBF_TVBfTjJDMTBfMTYyMDIxMDYwMDM2Mg,Marine Drive Gardens,Marine Parade,54 years,Keys Available
+2021-05_SBF_UFJDX041QzEyXzE2MjAyMTE4MDAxNDE,Pasir Ris St 53,Pasir Ris,74 years,Keys Available
+2021-05_SBF_UVRfTjFDNF8xNjE5NTA5ODUwMTI1,Skyoasis @ Dawson,Queenstown,15 - 99 years,Keys Available
+2021-05_SBF_U0dOX04yQzFfMTYyMDIxMjEwMDA5Ng,Boundary Ville,Serangoon,63 years,Keys Available
+2021-05_SBF_VEFQX044QzMxXzE2MTk1MDk4NTA5ODA,Tampines Greenspring,Tampines,15 - 99 years,11/2022 to 1/2023
+2021-05_SBF_VFBfTjJDMjNBXzE2MTk1MDk4NTQ4OTU,Toa Payoh Apex,Toa Payoh,98 years,Keys Available

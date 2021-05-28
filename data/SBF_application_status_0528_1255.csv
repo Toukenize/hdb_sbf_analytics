@@ -1,0 +1,68 @@
+town,flat_type,num_units,num_applicants,first_timers,second_timers,overall,num_first_timers,num_second_timers,num_applicants_computed
+Bukit Batok,"3-Room (Income Ceiling $7,000)",7,74,5.9,,10.6,39,,39.0
+Bukit Batok,4-Room,29,340,9.3,80.0,11.7,256,116.0,372.0
+Bukit Batok,5-Room / Executive,13,139,7.8,,10.7,96,,96.0
+Bukit Panjang,4-Room,9,186,15.6,,20.7,133,,133.0
+Bukit Panjang,5-Room / 3Gen,7,108,9.0,,15.4,60,,60.0
+Choa Chu Kang,"3-Room (Income Ceiling $7,000)",3,37,5.3,,12.3,15,,15.0
+Choa Chu Kang,4-Room,9,132,11.6,,14.7,99,,99.0
+Choa Chu Kang,5-Room,6,63,8.0,,10.5,46,,46.0
+Hougang,"3-Room (Income Ceiling $7,000)",7,32,2.4,,4.6,16,,16.0
+Hougang,4-Room,5,93,14.6,,18.6,69,,69.0
+Hougang,5-Room / 3Gen / Executive,3,122,24.7,,40.7,70,,70.0
+Jurong East / West,"3-Room (Income Ceiling $7,000)",8,59,3.9,,7.4,30,,30.0
+Jurong East / West,4-Room,11,156,11.1,,14.2,116,,116.0
+Jurong East / West,5-Room / 3Gen / Executive,14,100,4.2,,7.1,56,,56.0
+Punggol,"3-Room (Income Ceiling $7,000)",15,109,3.7,,7.3,53,,53.0
+Punggol,"3-Room (Income Ceiling $14,000)",3,23,3.3,,7.7,9,,9.0
+Punggol,4-Room,124,594,3.7,26.3,4.8,436,163.0,599.0
+Punggol,5-Room / 3Gen,49,470,4.7,124.5,9.6,219,305.0,524.0
+Sembawang,"3-Room (Income Ceiling $7,000)",1,29,15.0,,29.0,14,,14.0
+Sembawang,4-Room,19,343,13.8,,18.1,249,,249.0
+Sembawang,5-Room / 3Gen / Executive,11,287,17.9,,26.1,187,,187.0
+Sengkang,"3-Room (Income Ceiling $7,000)",15,131,3.9,,8.7,56,,56.0
+Sengkang,4-Room,42,334,6.3,40.5,8.0,251,85.0,336.0
+Sengkang,5-Room / 3Gen / Executive,32,351,7.3,125.0,11.0,222,200.0,422.0
+Tengah,"3-Room (Income Ceiling $7,000)",115,79,0.3,9.4,0.7,33,54.0,87.0
+Tengah,4-Room,38,197,4.3,39.0,5.2,155,74.0,229.0
+Tengah,5-Room / 3Gen,65,237,2.9,19.7,3.6,179,64.0,243.0
+Woodlands,"3-Room (Income Ceiling $7,000)",13,81,3.1,,6.2,38,,38.0
+Woodlands,4-Room,23,372,12.8,90.0,16.2,280,104.0,384.0
+Woodlands,5-Room / Executive,15,182,9.1,,12.1,130,,130.0
+Yishun,"3-Room (Income Ceiling $7,000)",17,145,4.5,,8.5,73,,73.0
+Yishun,4-Room,34,271,5.7,82.0,8.0,184,139.0,323.0
+Yishun,5-Room / 3Gen,10,80,4.8,,8.0,46,,46.0
+Ang Mo Kio,3-Room,12,23,1.0,,1.9,11,,11.0
+Ang Mo Kio,4-Room,15,135,5.7,,9.0,81,,81.0
+Ang Mo Kio,5-Room,2,18,2.5,,9.0,5,,5.0
+Bedok,3-Room,16,63,1.8,,3.9,27,,27.0
+Bedok,4-Room,14,213,9.5,,15.2,126,,126.0
+Bedok,5-Room / Executive,6,82,8.5,,13.7,48,,48.0
+Bishan,3-Room,1,6,4.0,,6.0,4,,4.0
+Bishan,4-Room,4,31,6.0,,7.8,23,,23.0
+Bishan,5-Room,1,6,3.0,,6.0,3,,3.0
+Bukit Merah,3-Room,3,13,2.3,,4.3,7,,7.0
+Bukit Merah,4-Room,3,16,4.0,,5.3,11,,11.0
+Clementi,3-Room,15,58,2.6,,3.9,37,,37.0
+Clementi,4-Room,21,344,11.5,114.0,16.4,229,120.0,349.0
+Clementi,5-Room / 3Gen,9,152,8.3,,16.9,71,,71.0
+Geylang,3-Room,18,53,1.5,,2.9,26,,26.0
+Geylang,4-Room,26,273,8.4,62.0,10.5,207,81.0,288.0
+Kallang / Whampoa,3-Room,15,42,1.5,,2.8,21,,21.0
+Kallang / Whampoa,4-Room,18,288,12.4,,16.0,212,,212.0
+Kallang / Whampoa,5-Room,1,100,54.0,,100.0,51,,51.0
+Marine Parade,3-Room,1,4,1.0,,4.0,1,,1.0
+Marine Parade,4-Room,1,6,3.0,,6.0,3,,3.0
+Pasir Ris,4-Room,4,34,7.0,,8.5,27,,27.0
+Pasir Ris,5-Room / Executive,7,48,3.6,,6.9,24,,24.0
+Queenstown,3-Room,12,98,5.3,,8.2,60,,60.0
+Queenstown,4-Room,7,132,12.9,,18.9,86,,86.0
+Queenstown,5-Room,2,30,8.0,,15.0,15,,15.0
+Serangoon,4-Room,1,1,1.0,,1.0,1,,1.0
+Serangoon,5-Room,2,11,3.5,,5.5,7,,7.0
+Tampines,3-Room,24,172,3.5,92.0,7.2,80,110.0,190.0
+Tampines,4-Room,47,725,12.8,75.0,15.4,572,176.0,748.0
+Tampines,5-Room / 3Gen,33,476,8.9,192.0,14.4,279,317.0,596.0
+Toa Payoh,3-Room,27,84,1.6,42.0,3.1,41,57.0,98.0
+Toa Payoh,4-Room,132,885,5.6,29.0,6.7,702,191.0,893.0
+Toa Payoh,5-Room / 3Gen,5,139,18.4,,27.8,87,,87.0

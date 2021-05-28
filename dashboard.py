@@ -1,6 +1,5 @@
 import streamlit as st
-from datetime import datetime, timedelta
-from dateutil.relativedelta import relativedelta
+from datetime import timedelta
 from src.process_data import (
     get_app_info, get_proj_info, get_flat_info, get_selected_proj_info)
 
@@ -51,6 +50,10 @@ def show_dashboard():
 
     )
 
+    race = st.sidebar.selectbox(
+        'Ethnicity', options=['Chinese', 'Malay', 'Indian']
+    )
+
     selected_proj_info = get_selected_proj_info(
         app_info, proj_info, flat_info,
         min_floor=min_floor,
@@ -58,7 +61,8 @@ def show_dashboard():
         min_lease=min_lease,
         max_lease=max_lease,
         flat_selection=flat_selection,
-        latest_comp=latest_comp
+        latest_comp=latest_comp,
+        race=race.lower()
     )
 
     selected_proj_info.reset_index(drop=True, inplace=True)

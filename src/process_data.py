@@ -48,6 +48,20 @@ def get_proj_info():
         .tolist()
     )
 
+    # Process Unit info
+    df_proj_info['unit_num'] = (
+        df_proj_info['unit_num']
+        .str.extract(r'(\w+)').squeeze().tolist()
+    )
+    df_proj_info['unit_size'] = (
+        df_proj_info['unit_size']
+        .str.extract(r'(\d+)').squeeze().tolist()
+    )
+    df_proj_info['unit_price'] = (
+        df_proj_info['unit_price']
+        .str.extract(r'(\d+),(\d+)').sum(axis=1).astype(int)
+    )
+
     return df_proj_info
 
 
@@ -113,6 +127,7 @@ def get_selected_proj_info(
         max_floor: int = 99,
         min_lease: int = 0,
         max_lease: int = 99,
+        race: str = 'chinese',
         flat_selection: List[str] = ['4-Room', '5-Room'],
         latest_comp: datetime = datetime(2030, 1, 1)
 ) -> pd.DataFrame:
@@ -150,7 +165,7 @@ def get_selected_proj_info(
 
     # Select the upper limit of supply
     df_proj_info_selected['supply_within_crit_n_quota'] = (
-        df_proj_info_selected[['supply_within_crit', 'chinese']].min(axis=1)
+        df_proj_info_selected[['supply_within_crit', race]].min(axis=1)
     )
 
     # Merge application status

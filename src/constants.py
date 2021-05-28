@@ -6,9 +6,6 @@ SBF_APP_INFO_PAGE = \
     'https://services2.hdb.gov.sg/webapp/'\
     'BP13BTOENQWeb/AR_May2021_SBF?strSystem=SBF'
 
-TABLE_2ROOM_COLS = ['town', 'flat_type', 'num_units', 'num_applicants',
-                    'elderly', 'first_timers', 'second_timers', 'singles',
-                    'overall']
 TABLE_3ROOM_ABV_COLS = ['town', 'flat_type', 'num_units', 'num_applicants',
                         'first_timers', 'second_timers', 'overall']
 

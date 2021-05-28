@@ -129,6 +129,7 @@ def get_selected_proj_info(
         max_lease: int = 99,
         race: str = 'chinese',
         flat_selection: List[str] = ['4-Room', '5-Room'],
+        town_selection: List[str] = ['All Towns'],
         latest_comp: datetime = datetime(2030, 1, 1)
 ) -> pd.DataFrame:
 
@@ -144,6 +145,9 @@ def get_selected_proj_info(
         (df_proj_info['flat_type'].isin(flat_selection)) &
         (df_proj_info['Est_Completion'] <= latest_comp)
     )
+
+    if 'All Towns' not in town_selection:
+        sel = sel & (df_proj_info['Town'].isin(town_selection))
 
     # Get project supply info tts within selection criteria
     df_proj_info_selected = (
@@ -183,8 +187,7 @@ def get_selected_proj_info(
     # Calculate adjusted chance
     df_merged['adjusted_chance_pc'] = (
         (df_merged['supply_within_crit_n_quota'] /
-         df_merged['num_first_timers'] * 100)
-        .round(1)
+         df_merged['num_first_timers'])
     )
 
     # Show results

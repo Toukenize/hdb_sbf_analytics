@@ -3,7 +3,7 @@ from datetime import timedelta, datetime
 from src.process_data import (
     get_app_info, get_proj_info, get_flat_info, get_selected_proj_info)
 
-from src.utils import format_as_pc
+from src.utils import format_as_pc, highlight_max
 
 
 @st.cache
@@ -31,6 +31,10 @@ def show_dashboard():
 
     # Format sidebar
     st.sidebar.header('Sales of Balance Flat Criteria')
+    race = st.sidebar.selectbox(
+        'Ethnicity', options=['Chinese', 'Malay', 'Indian']
+    )
+
     town_selection = st.sidebar.multiselect(
         label='Towns', options=town_options, default='All Towns'
     )
@@ -56,9 +60,6 @@ def show_dashboard():
         format='Y/M'
 
     )
-    race = st.sidebar.selectbox(
-        'Ethnicity', options=['Chinese', 'Malay', 'Indian']
-    )
 
     selected_proj_info = get_selected_proj_info(
         app_info, proj_info, flat_info,
@@ -81,7 +82,16 @@ def show_dashboard():
             'supply_within_crit_n_quota': 'Units (#)',
             'num_first_timers': '1st-Timers (#)',
             'adjusted_chance_pc': 'Chance (%)'},
-        inplace=True)
+        inplace=True
+    )
+
+    df_style = (
+        selected_proj_info.style
+        .apply(
+            highlight_max,
+            subset=['Units (#)', '1st-Timers (#)', 'Chance (%)'])
+        .format({'Chance (%)': format_as_pc})
+    )
 
     st.title('Chance of Getting SBF as a 1st-Timer')
     st.markdown(
@@ -91,8 +101,7 @@ def show_dashboard():
         """
     )
 
-    st.dataframe(selected_proj_info.style.format(
-        {'Chance (%)': format_as_pc}), 800, 500)
+    st.dataframe(df_style, 800, 500)
 
 
 if __name__ == '__main__':

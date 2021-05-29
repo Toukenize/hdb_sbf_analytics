@@ -1,9 +1,18 @@
 import pandas as pd
 from datetime import datetime
 from typing import List
-from .constants import (
+from ..constants import (
     PROJ_INFO_PATH, APP_INFO_PATH,
-    BLOCK_INFO_PATH, FLAT_INFO_PATH)
+    BLOCK_INFO_PATH, FLAT_INFO_PATH, SBF_PAGE_PREFIX)
+
+
+def load_all():
+
+    app_info = get_app_info()
+    proj_info = get_proj_info()
+    flat_info = get_flat_info()
+
+    return app_info, proj_info, flat_info
 
 
 def get_proj_info():
@@ -59,8 +68,14 @@ def get_proj_info():
     )
     df_proj_info['unit_price'] = (
         df_proj_info['unit_price']
-        .str.extract(r'(\d+),(\d+)').sum(axis=1).astype(int)
+        .str.extract(r'(\d+),(\d+)').sum(axis=1)
+        .astype(float)
+        .div(1_000)
     )
+
+    # Return only 3,4,5 room info
+    sel = df_proj_info['flat_type'].isin(['4-Room', '3-Room', '5-Room'])
+    df_proj_info = df_proj_info.loc[sel].copy().reset_index(drop=True)
 
     return df_proj_info
 
@@ -127,6 +142,8 @@ def get_selected_proj_info(
         max_floor: int = 99,
         min_lease: int = 0,
         max_lease: int = 99,
+        min_price: int = 100,
+        max_price: int = 900,
         race: str = 'chinese',
         flat_selection: List[str] = ['4-Room', '5-Room'],
         town_selection: List[str] = ['All Towns'],
@@ -142,6 +159,10 @@ def get_selected_proj_info(
             (df_proj_info['floor_num'] >= min_floor) &
             (df_proj_info['floor_num'] <= max_floor)
         ) &
+        (
+            (df_proj_info['unit_price'] >= min_price) &
+            (df_proj_info['unit_price'] <= max_price)
+        ) &
         (df_proj_info['flat_type'].isin(flat_selection)) &
         (df_proj_info['Est_Completion'] <= latest_comp)
     )
@@ -156,7 +177,8 @@ def get_selected_proj_info(
         .groupby(['proj_id', 'flat_type'])
         .agg(
             town=('Town', 'first'),
-            supply_within_crit=('Town', 'count')
+            supply_within_crit=('Town', 'count'),
+            price_list=('unit_price', list)
         )
         .reset_index()
     )
@@ -176,8 +198,15 @@ def get_selected_proj_info(
     df_merged = (
         df_proj_info_selected
         .groupby(['town', 'flat_type'], as_index=False)
-        [['supply_within_crit_n_quota']]
-        .sum()
+        .agg(
+            supply_within_crit_n_quota=('supply_within_crit_n_quota', 'sum'),
+            proj_list=(
+                'proj_id', lambda x: list(SBF_PAGE_PREFIX + i for i in x)),
+            avg_price=(
+                'price_list',
+                lambda x: x.explode().mean().astype(int)
+            )
+        )
         .merge(
             df_app_status[['town', 'flat_type', 'num_first_timers']],
             on=['town', 'flat_type']

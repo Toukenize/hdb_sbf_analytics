@@ -26,7 +26,8 @@ def race_widget():
 
 def town_sel_widget(town_options):
     town_selection = st.sidebar.multiselect(
-        label='Towns', options=town_options, default='All Towns'
+        label='Towns', options=['All Towns'] + town_options,
+        default='All Towns'
     )
     return town_selection
 
@@ -71,7 +72,7 @@ def price_range_widget(overall_min_price, overall_max_price):
 @st.cache
 def get_widget_info(proj_info: pd.DataFrame) -> Dict:
 
-    town_options = ['All Towns'] + sorted(proj_info['Town'].unique().tolist())
+    town_options = sorted(proj_info['Town'].unique().tolist())
     flat_options = ['3-Room', '4-Room', '5-Room']
     overall_max_floor = int(proj_info['floor_num'].max())
     overall_earliest_comp = proj_info['Est_Completion'].min().to_pydatetime()
@@ -106,6 +107,28 @@ def get_summary_page_widgets_input(**kwargs):
         'race': race.lower(),
         'town_selection': town_selection,
         'flat_selection': flat_selection,
+        'min_floor': min_floor,
+        'max_floor': max_floor,
+        'min_lease': min_lease,
+        'max_lease': max_lease,
+        'latest_comp': latest_comp,
+        'min_price': min_price,
+        'max_price': max_price
+    }
+
+
+def get_pairwise_page_widgets_input(**kwargs):
+    st.sidebar.header('SBF Selection Criteria')
+    race = race_widget()
+    min_price, max_price = price_range_widget(
+        kwargs['overall_min_price'], kwargs['overall_max_price'])
+    min_floor, max_floor = floor_range_widget(kwargs['overall_max_floor'])
+    min_lease, max_lease = lease_range_widget()
+    latest_comp = latest_comp_widget(
+        kwargs['overall_earliest_comp'], kwargs['overall_latest_comp'])
+
+    return {
+        'race': race.lower(),
         'min_floor': min_floor,
         'max_floor': max_floor,
         'min_lease': min_lease,

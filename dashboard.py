@@ -1,9 +1,13 @@
 import streamlit as st
 
-from src.dashboard.pages import summary
-from src.dashboard.data import load_all, get_selected_proj_info
+from src.dashboard.pages import summary, pairwise
+from src.dashboard.data import (
+    load_all, get_selected_proj_info
+)
 from src.dashboard.sidebar import (
-    get_widget_info, get_summary_page_widgets_input)
+    get_widget_info, get_summary_page_widgets_input,
+    get_pairwise_page_widgets_input
+)
 
 
 def show_dashboard():
@@ -28,6 +32,15 @@ def show_dashboard():
             **widget_input)
 
         summary.render_content(selected_proj_info)
+
+    elif page == 'Pairwise Comparison':
+        # Render sidebar widgets and get user input
+        widget_info = get_widget_info(proj_info)
+        widget_input = get_pairwise_page_widgets_input(**widget_info)
+
+        pairwise.render_content(
+            widget_info, widget_input, proj_info
+        )
 
 
 if __name__ == '__main__':

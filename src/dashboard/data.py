@@ -221,3 +221,47 @@ def get_selected_proj_info(
 
     # Show results
     return df_merged.sort_values('adjusted_chance_pc', ascending=False)
+
+
+def get_selected_town_and_flat_proj_info(
+        proj_info: pd.DataFrame,
+        min_floor: int = 0,
+        max_floor: int = 99,
+        min_lease: int = 0,
+        max_lease: int = 99,
+        min_price: int = 100,
+        max_price: int = 900,
+        race: str = 'chinese',
+        flat_selection: str = '4-Room',
+        town_selection: str = 'Punggol',
+        latest_comp: datetime = datetime(2030, 1, 1)
+):
+    town_flat_sel = (
+        (proj_info['flat_type'] == flat_selection) &
+        (proj_info['Town'] == town_selection)
+    )
+
+    crit_sel = (
+        (
+            (proj_info['Remaining_Lease_years'] >= min_lease) &
+            (proj_info['Remaining_Lease_years'] <= max_lease)
+        ) &
+        (
+            (proj_info['floor_num'] >= min_floor) &
+            (proj_info['floor_num'] <= max_floor)
+        ) &
+        (
+            (proj_info['unit_price'] >= min_price) &
+            (proj_info['unit_price'] <= max_price)
+        ) &
+        (proj_info['Est_Completion'] <= latest_comp)
+    )
+
+    proj_info_all = proj_info.loc[town_flat_sel].copy()
+    proj_info_selected = proj_info.loc[town_flat_sel & crit_sel].copy()
+    proj_info_not_selected = proj_info.loc[town_flat_sel & ~crit_sel].copy()
+
+    assert len(proj_info_selected) + len(proj_info_not_selected) ==\
+        len(proj_info_all), 'Project dataframe subset does not tally.'
+
+    return proj_info_all, proj_info_selected, proj_info_not_selected

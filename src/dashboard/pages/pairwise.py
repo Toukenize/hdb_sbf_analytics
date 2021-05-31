@@ -26,7 +26,7 @@ def plot_unit_within_crit_pie(
     num_out_of_crit = len(proj_info_all) - num_within_crit
 
     data = pd.DataFrame(
-        {'Description': ['Units (Others)', 'Units (Within Critiria)'],
+        {'Description': ['# Units (Others)', '# Units (Within Critiria)'],
          'Number of Units': [num_out_of_crit, num_within_crit]})
 
     fig, ax = plt.subplots(1, 1, figsize=(8, 6))

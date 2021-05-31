@@ -17,3 +17,11 @@ def highlight_max(s):
 
 def align_center(_s):
     return 'text-align: center'
+
+
+def format_pie_pct_as_val(values):
+    def format_fn(pct):
+        total = sum(values)
+        val = int(round(pct*total/100.0))
+        return f'{val}'
+    return format_fn

@@ -39,7 +39,7 @@ def show_dashboard():
         widget_input = get_pairwise_page_widgets_input(**widget_info)
 
         pairwise.render_content(
-            widget_info, widget_input, proj_info
+            widget_info, widget_input, proj_info, flat_info
         )
 
 

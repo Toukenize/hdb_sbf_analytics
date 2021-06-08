@@ -74,7 +74,7 @@ def plot_bar(df, x_col, y_col, color_col, label_angle=0):
         .mark_bar()
         .encode(
             x=alt.X(f'{x_col}:O', sort=df[x_col].tolist()),
-            y=y_col,
+            y=alt.Y(y_col, axis=alt.Axis(tickMinStep=1)),
             tooltip=[x_col, y_col],
             color=alt.Color(color_col, scale=color_scale, legend=None)
         )
@@ -84,20 +84,60 @@ def plot_bar(df, x_col, y_col, color_col, label_angle=0):
     return chart
 
 
-def round_value_to_nearest_5(val):
-    rem = val % 5
-    if rem >= 3:
-        val = val - rem + 5
+def round_value_to_nearest(val, div, rem_thres):
+    rem = val % div
+    if rem >= rem_thres:
+        val = val - rem + div
     else:
         val = val - rem
     return val
 
 
+def make_barchart_df_price(df, min_price, max_price):
+
+    # Round price to nearest 50k
+    step_size = 50
+    min_price = round_value_to_nearest(min_price, 50, 30)
+    max_price = round_value_to_nearest(max_price, 50, 30)
+
+    # Setting bins for unit price
+    bin_min = df['unit_price'].min() // step_size * step_size
+    bin_max = df['unit_price'].max() // step_size * step_size + 1
+
+    bins = np.arange(bin_min, bin_max, step_size)
+    labels = [f'{i+1:.0f}-{i+step_size:.0f}k'
+              for i in np.arange(bin_min, bin_max - 1, step_size)]
+    assert len(bins) - 1 == len(labels), 'Check bins and labels'
+
+    df_bar = (
+        pd.cut(df['unit_price'], bins=bins, labels=labels)
+        .value_counts()
+        .sort_index()
+        .reset_index(name='No of Units')
+        .rename(columns={'index': 'Price Range (S$)'})
+    )
+
+    df_bar['bin_lower'] = bins[:-1]
+
+    # Set criteria for bar coloring
+    df_bar['bin_group'] = 'Unit (Others)'
+    sel = (
+        (df_bar['bin_lower'] >= min_price) &
+        (df_bar['bin_lower'] < max_price)
+    )
+    df_bar.loc[sel, 'bin_group'] = 'Unit (Within Criteria)'
+
+    df_bar['Price Range (S$)'] =\
+        df_bar['Price Range (S$)'].astype(object)
+
+    return df_bar
+
+
 def make_barchart_df_rem_lease(df, min_lease, max_lease):
 
     # Round lease to nearest 5 years
-    min_lease = round_value_to_nearest_5(min_lease)
-    max_lease = round_value_to_nearest_5(max_lease)
+    min_lease = round_value_to_nearest(min_lease, 5, 3)
+    max_lease = round_value_to_nearest(max_lease, 5, 3)
 
     # Setting bins for Remaining Lease Years
     bins = np.concatenate([[0], np.arange(40, 101, 5)])
@@ -126,6 +166,27 @@ def make_barchart_df_rem_lease(df, min_lease, max_lease):
 
     df_bar['Remaining Lease Years'] =\
         df_bar['Remaining Lease Years'].astype(object)
+
+    return df_bar
+
+
+def make_barchart_df_latest_comp(df, latest_comp):
+    df_bar = (
+        df
+        .set_index('Est_Completion')
+        ['Town']
+        .resample('3M')
+        .count()
+        .reset_index(name='No of Units')
+    )
+
+    df_bar['Estimated Completion Date'] = \
+        df_bar['Est_Completion'].apply(get_quarter_year)
+
+    df_bar['bin_group'] = 'Unit (Others)'
+
+    sel = df_bar['Est_Completion'] >= latest_comp
+    df_bar.loc[sel, 'bin_group'] = 'Unit (Within Criteria)'
 
     return df_bar
 
@@ -177,6 +238,12 @@ def make_barchart_df_floor(df, min_floor, max_floor):
     df_bar = df_bar.append(df_bar_mt15)
     df_bar['Floor'] = df_bar['Floor'].astype('str')
     return df_bar
+
+
+def get_quarter_year(x):
+    year = str(x.year)
+    quarter = f'Q{x.month / 3:.0f}'
+    return f'{quarter}/{year}'
 
 
 def town_sel_widget(town_options, key):
@@ -253,6 +320,12 @@ def render_content(
             df_rem_lease = make_barchart_df_rem_lease(
                 info_all, widget_input['min_lease'], widget_input['max_lease'])
 
+            df_price = make_barchart_df_price(
+                info_all, widget_input['min_price'], widget_input['max_price'])
+
+            df_latest_comp = make_barchart_df_latest_comp(
+                info_all, widget_input['latest_comp'])
+
             # # Test expander
             # with st.beta_expander('Project 1'):
             #     st.write('House | 1 2 3 | asdasd | 123')
@@ -261,6 +334,11 @@ def render_content(
 
             st.pyplot(plot_unit_within_crit_pie(
                 info_selected, info_all, flat_info_selected))
+
+            bar_price_range = plot_bar(
+                df_price, x_col='Price Range (S$)',
+                y_col='No of Units', color_col='bin_group', label_angle=-45)
+            st.altair_chart(bar_price_range, use_container_width=True)
 
             bar_rem_lease = plot_bar(
                 df_rem_lease, x_col='Remaining Lease Years',
@@ -271,6 +349,11 @@ def render_content(
                 df_floor, x_col='Floor', y_col='No of Units',
                 color_col='group')
             st.altair_chart(bar_floor, use_container_width=True)
+
+            bar_latest_comp = plot_bar(
+                df_latest_comp, x_col='Estimated Completion Date',
+                y_col='No of Units', color_col='bin_group', label_angle=-45)
+            st.altair_chart(bar_latest_comp, use_container_width=True)
 
             st.markdown(
                 "<h1 style='text-align: center;'>Overall Chance xx %</h1>",

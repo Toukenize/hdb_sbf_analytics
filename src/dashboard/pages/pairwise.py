@@ -3,6 +3,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import altair as alt
 import numpy as np
+import textwrap
 
 from typing import List, Dict
 from matplotlib.figure import Figure
@@ -10,10 +11,10 @@ from ..data import get_selected_town_and_flat_proj_info
 from ..utils import format_pie_pct_as_val
 
 
-def plot_unit_within_crit_pie(
+def make_crit_prop_df(
         proj_info_selected: pd.DataFrame,
         proj_info_all: pd.DataFrame,
-        flat_info_selected: pd.DataFrame) -> Figure:
+        flat_info_selected: pd.DataFrame) -> pd.DataFrame:
 
     num_within_crit = (
         proj_info_selected
@@ -28,17 +29,69 @@ def plot_unit_within_crit_pie(
 
     num_out_of_crit = len(proj_info_all) - num_within_crit
 
-    data = pd.DataFrame(
-        {'Description': ['# Units (Others)', '# Units (Within Critiria)'],
+    crit_prop_df = pd.DataFrame(
+        {'Description': ['# Units (Others)', '# Units (Within Criteria)'],
          'Number of Units': [num_out_of_crit, num_within_crit]})
+
+    return crit_prop_df
+
+
+def make_overall_chance_string(
+        crit_prop_df: pd.DataFrame,
+        app_info: pd.DataFrame,
+        town: str,
+        flat_type: str) -> str:
+
+    sel = (
+        (app_info['town'] == town) &
+        (app_info['flat_type'] == flat_type)
+    )
+
+    total_1st_timers = int(
+        app_info.loc[sel, 'num_first_timers'].squeeze())
+
+    units_within_crit = int(
+        crit_prop_df
+        .query('Description == "# Units (Within Criteria)"')
+        ['Number of Units']
+        .squeeze()
+    )
+
+    chance = units_within_crit / total_1st_timers
+    app_str = "No of 1st Timers Applicants"
+    unit_str = "No of Units Within Criteria"
+    chance_str = "Chance of Getting a Unit"
+
+    markdown_str = textwrap.dedent(f"""
+        <table style="width:100%; border: none;">
+        <tr style="border: none;">
+            <th style="border: none;width: 70%;">{unit_str}</th>
+            <th style="border: none;width: 30%;">{units_within_crit}</th>
+        </tr>
+        <tr style="border: none;">
+            <th style="border: none;">{app_str}</th>
+            <th style="border: none;">{total_1st_timers}</th>
+        </tr>
+        <tr style="border: none;">
+            <th style="border: none;">{chance_str}</th>
+            <th style="border: none;">{chance:.2%}</th>
+        </tr>
+        </table>
+        """)
+
+    return markdown_str
+
+
+def plot_unit_within_crit_pie(
+        crit_prop_df: pd.DataFrame) -> Figure:
 
     fig, ax = plt.subplots(1, 1, figsize=(8, 4))
 
     patches, texts, auto_txts = ax.pie(
-        x=data['Number of Units'],
-        labels=data['Description'],
+        x=crit_prop_df['Number of Units'],
+        labels=crit_prop_df['Description'],
         labeldistance=None,
-        autopct=format_pie_pct_as_val(data['Number of Units']),
+        autopct=format_pie_pct_as_val(crit_prop_df['Number of Units']),
         startangle=90,
         colors=['lightgrey', '#F63366'],
         explode=[0.1, 0])
@@ -272,15 +325,9 @@ def get_additional_input(
 
 
 def get_column_info(
-        widget_info: Dict, widget_input: Dict,
+        widget_info: Dict, widget_input: Dict, add_input: Dict,
         proj_info: pd.DataFrame, flat_info: pd.DataFrame,
-        column_key: str):
-    # TODO: Provide a more intuitive func name
-    add_input = get_additional_input(
-        town_options=widget_info['town_options'],
-        flat_options=widget_info['flat_options'],
-        key=column_key)
-
+):
     sel = (flat_info['flat_type'] == add_input['flat_selection'])
 
     flat_info_selected = (
@@ -298,7 +345,8 @@ def get_column_info(
 
 def render_content(
         widget_info: Dict, widget_input: Dict,
-        proj_info: pd.DataFrame, flat_info: pd.DataFrame):
+        proj_info: pd.DataFrame, flat_info: pd.DataFrame,
+        app_info: pd.DataFrame):
 
     st.title('Pairwise Comparison')
 
@@ -307,12 +355,17 @@ def render_content(
     for i, col in enumerate([c1, c2]):
         with col:
 
-            # Get additional options from main content widgets
+            # TODO: Provide a more intuitive func name
+            add_input = get_additional_input(
+                town_options=widget_info['town_options'],
+                flat_options=widget_info['flat_options'],
+                key=str(i))
 
+            # Get additional options from main content widgets
             info_all, info_selected, info_not_selected, flat_info_selected =\
                 get_column_info(
-                    widget_info, widget_input,
-                    proj_info, flat_info, column_key=str(i))
+                    widget_info, widget_input, add_input,
+                    proj_info, flat_info)
 
             df_floor = make_barchart_df_floor(
                 info_all, widget_input['min_floor'], widget_input['max_floor'])
@@ -326,35 +379,41 @@ def render_content(
             df_latest_comp = make_barchart_df_latest_comp(
                 info_all, widget_input['latest_comp'])
 
+            # Tabulate all df required for charts/ markdown
+            crit_prop_df = make_crit_prop_df(
+                info_selected, info_all, flat_info_selected)
+
+            chance_string = make_overall_chance_string(
+                crit_prop_df, app_info,
+                town=add_input['town_selection'],
+                flat_type=add_input['flat_selection']
+            )
+
+            bar_price_range = plot_bar(
+                df_price, x_col='Price Range (S$)',
+                y_col='No of Units', color_col='bin_group', label_angle=-45)
+
+            bar_rem_lease = plot_bar(
+                df_rem_lease, x_col='Remaining Lease Years',
+                y_col='No of Units', color_col='bin_group', label_angle=-45)
+
+            bar_latest_comp = plot_bar(
+                df_latest_comp, x_col='Estimated Completion Date',
+                y_col='No of Units', color_col='bin_group', label_angle=-45)
+
+            bar_floor = plot_bar(
+                df_floor, x_col='Floor', y_col='No of Units',
+                color_col='group')
+
             # # Test expander
             # with st.beta_expander('Project 1'):
             #     st.write('House | 1 2 3 | asdasd | 123')
             #     st.write('House | 1 2 3 | asdasd | 123')
             #     st.write('House | 1 2 3 | asdasd | 123')
 
-            st.pyplot(plot_unit_within_crit_pie(
-                info_selected, info_all, flat_info_selected))
-
-            bar_price_range = plot_bar(
-                df_price, x_col='Price Range (S$)',
-                y_col='No of Units', color_col='bin_group', label_angle=-45)
+            st.markdown(chance_string, unsafe_allow_html=True)
+            st.pyplot(plot_unit_within_crit_pie(crit_prop_df))
             st.altair_chart(bar_price_range, use_container_width=True)
-
-            bar_rem_lease = plot_bar(
-                df_rem_lease, x_col='Remaining Lease Years',
-                y_col='No of Units', color_col='bin_group', label_angle=-45)
             st.altair_chart(bar_rem_lease, use_container_width=True)
-
-            bar_floor = plot_bar(
-                df_floor, x_col='Floor', y_col='No of Units',
-                color_col='group')
             st.altair_chart(bar_floor, use_container_width=True)
-
-            bar_latest_comp = plot_bar(
-                df_latest_comp, x_col='Estimated Completion Date',
-                y_col='No of Units', color_col='bin_group', label_angle=-45)
             st.altair_chart(bar_latest_comp, use_container_width=True)
-
-            st.markdown(
-                "<h1 style='text-align: center;'>Overall Chance xx %</h1>",
-                unsafe_allow_html=True)

@@ -5,6 +5,7 @@ import altair as alt
 import numpy as np
 import textwrap
 
+from bs4 import BeautifulSoup
 from typing import List, Dict
 from matplotlib.figure import Figure
 from ..data import get_selected_town_and_flat_proj_info
@@ -30,7 +31,7 @@ def make_crit_prop_df(
     num_out_of_crit = len(proj_info_all) - num_within_crit
 
     crit_prop_df = pd.DataFrame(
-        {'Description': ['# Units (Others)', '# Units (Within Criteria)'],
+        {'Description': ['Units (Others)', 'Units (Within Criteria)'],
          'Number of Units': [num_out_of_crit, num_within_crit]})
 
     return crit_prop_df
@@ -52,7 +53,7 @@ def make_overall_chance_string(
 
     units_within_crit = int(
         crit_prop_df
-        .query('Description == "# Units (Within Criteria)"')
+        .query('Description == "Units (Within Criteria)"')
         ['Number of Units']
         .squeeze()
     )
@@ -107,7 +108,10 @@ def plot_unit_within_crit_pie(
     auto_txts[1].set_c('white')
     auto_txts[1].set_fontsize(20)
 
-    ax.legend(bbox_to_anchor=[1.05, 0.5], fontsize=12)
+    legend = ax.legend(bbox_to_anchor=[1.05, 0.5], fontsize=8, frameon=False,
+                       handlelength=1, handleheight=1)
+    legend.set_title(title='Unit Type', prop={'weight': 'heavy'})
+    legend._legend_box.align = "left"
 
     return fig
 
@@ -128,8 +132,12 @@ def plot_bar(df, x_col, y_col, color_col, label_angle=0):
         .encode(
             x=alt.X(f'{x_col}:O', sort=df[x_col].tolist()),
             y=alt.Y(y_col, axis=alt.Axis(tickMinStep=1)),
-            tooltip=[x_col, y_col],
-            color=alt.Color(color_col, scale=color_scale, legend=None)
+            tooltip=[color_col, x_col, y_col],
+            color=alt.Color(color_col,
+                            scale=color_scale,
+                            legend=alt.Legend(
+                                orient="top-right")
+                            )
         )
         .configure_axisX(labelAngle=label_angle)
     )
@@ -147,6 +155,8 @@ def round_value_to_nearest(val, div, rem_thres):
 
 
 def make_barchart_df_price(df, min_price, max_price):
+
+    # TODO: Look into the bar groups (some are missing)
 
     # Round price to nearest 50k
     step_size = 50
@@ -173,12 +183,12 @@ def make_barchart_df_price(df, min_price, max_price):
     df_bar['bin_lower'] = bins[:-1]
 
     # Set criteria for bar coloring
-    df_bar['bin_group'] = 'Unit (Others)'
+    df_bar['Unit Type'] = 'Unit (Others)'
     sel = (
         (df_bar['bin_lower'] >= min_price) &
         (df_bar['bin_lower'] < max_price)
     )
-    df_bar.loc[sel, 'bin_group'] = 'Unit (Within Criteria)'
+    df_bar.loc[sel, 'Unit Type'] = 'Unit (Within Criteria)'
 
     df_bar['Price Range (S$)'] =\
         df_bar['Price Range (S$)'].astype(object)
@@ -210,12 +220,12 @@ def make_barchart_df_rem_lease(df, min_lease, max_lease):
     df_bar['bin_lower'] = bins[:-1]
 
     # Set criteria for bar coloring
-    df_bar['bin_group'] = 'Unit (Others)'
+    df_bar['Unit Type'] = 'Unit (Others)'
     sel = (
         (df_bar['bin_lower'] >= min_lease) &
         (df_bar['bin_lower'] < max_lease)
     )
-    df_bar.loc[sel, 'bin_group'] = 'Unit (Within Criteria)'
+    df_bar.loc[sel, 'Unit Type'] = 'Unit (Within Criteria)'
 
     df_bar['Remaining Lease Years'] =\
         df_bar['Remaining Lease Years'].astype(object)
@@ -236,10 +246,10 @@ def make_barchart_df_latest_comp(df, latest_comp):
     df_bar['Estimated Completion Date'] = \
         df_bar['Est_Completion'].apply(get_quarter_year)
 
-    df_bar['bin_group'] = 'Unit (Others)'
+    df_bar['Unit Type'] = 'Unit (Within Criteria)'
 
     sel = df_bar['Est_Completion'] >= latest_comp
-    df_bar.loc[sel, 'bin_group'] = 'Unit (Within Criteria)'
+    df_bar.loc[sel, 'Unit Type'] = 'Unit (Others)'
 
     return df_bar
 
@@ -267,9 +277,9 @@ def make_barchart_df_floor(df, min_floor, max_floor):
     num_mt15 = df_bar.query('Floor > 15')['No of Units'].sum()
     df_bar_mt15 = pd.DataFrame({'Floor': ['16+'], 'No of Units': [num_mt15]})
     if max_floor > 15:
-        df_bar_mt15['group'] = 'Unit (Within Criteria)'
+        df_bar_mt15['Unit Type'] = 'Unit (Within Criteria)'
     else:
-        df_bar_mt15['group'] = 'Unit (Others)'
+        df_bar_mt15['Unit Type'] = 'Unit (Others)'
 
     # Fill missing floors (i.e. floors without units)
     df_bar = (
@@ -280,17 +290,116 @@ def make_barchart_df_floor(df, min_floor, max_floor):
     )
 
     # Set criteria for bar coloring
-    df_bar['group'] = 'Unit (Others)'
+    df_bar['Unit Type'] = 'Unit (Others)'
     sel = (
         (df_bar['Floor'] >= min_floor) &
         (df_bar['Floor'] <= max_floor)
     )
-    df_bar.loc[sel, 'group'] = 'Unit (Within Criteria)'
+    df_bar.loc[sel, 'Unit Type'] = 'Unit (Within Criteria)'
 
     # Append with units more than 15 floors
     df_bar = df_bar.append(df_bar_mt15)
     df_bar['Floor'] = df_bar['Floor'].astype('str')
     return df_bar
+
+
+def make_precinct_html_table(
+        info_selected: pd.DataFrame,
+        precinct: str, units_per_row: int = 3):
+
+    assert precinct in info_selected['precinct_name'].unique(), \
+        f'{precinct} is not a valid precinct in selected dataframe.'
+    cols = ['blk_num', 'unit_details']
+
+    sel = info_selected['precinct_name'] == precinct
+    prec_df = (
+        info_selected
+        .loc[sel]
+        .sort_values(
+            ['blk_num', 'floor_num', 'unit_num', 'unit_price'],
+            ascending=[True, False, True, True])
+        [cols]
+        .groupby('blk_num')
+        .apply(
+            lambda x: (
+                x
+                .reset_index(drop=True)
+                .assign(
+                    col_val=lambda x: x.index % units_per_row,
+                    row_idx=lambda x: x.index // units_per_row
+                )
+            )
+        )
+        .set_index(['blk_num', 'row_idx', 'col_val'])
+        .unstack(fill_value='')
+        .reset_index(-1, drop=True)
+        .reset_index()
+    )
+
+    # Append additional columns & tidy column name
+    new_cols = units_per_row - len(prec_df.columns) + 1
+    for i in range(new_cols):
+        prec_df[i] = ''
+
+    prec_df.columns = ['Block Info', 'Units Info'] + [''] * (units_per_row - 1)
+
+    # Generate block info dict
+    block_info_dict = prec_df['Block Info'].value_counts().to_dict()
+
+    # Replace block info such that each unique info only appear once
+    prec_df['Block Info'] = prec_df['Block Info'].drop_duplicates(keep='first')
+    prec_df['Block Info'] = prec_df['Block Info'].fillna('')
+
+    prec_df.set_index(['Block Info'], inplace=True)
+
+    # Generate html string
+    table_html = prec_df.to_html(escape=False)
+
+    # Process html string
+    table_html = format_precinct_table_html(table_html, block_info_dict)
+
+    return table_html
+
+
+def get_unit_details(floor_num, unit_num, unit_price):
+    unit_str = f'#{str(floor_num)}-{str(unit_num)}'
+    price_str = f'(${unit_price:.0f}k)'
+    unit_details = f'{unit_str} <br> {price_str}'
+    return unit_details
+
+
+def format_precinct_table_html(table_html, block_info_dict):
+
+    # Convert html string to soup
+    table_soup = BeautifulSoup(table_html, features='lxml')
+
+    # Update table attributes
+    tab_info = table_soup.find('table')
+    tab_info.attrs = dict()
+    tab_info['style'] = 'width:100%; border: none;'
+
+    # Remove table header row
+    table_soup.find('thead').replace_with('')
+
+    # If th is something, replace it with the row span
+    # If th is blank, remove it
+    for c in list(table_soup.find('table').findChildren()):
+
+        if c.name == 'th':
+            if c.text != '':
+                c['rowspan'] = block_info_dict[c.text]
+                c['valign'] = 'top'
+            else:
+                c.replace_with('')
+        if c.name == 'tr':
+            if c.find('th').text != '':
+                c['style'] = 'border-top: solid thin; width: 25%;'
+        elif c.name == 'th':
+            c['style'] = 'border: none; text-align: left; width: 25%;'
+        else:
+            c['style'] = 'border: none; text-align: center; width: 25%;'
+
+    return table_soup.find('table').prettify()
 
 
 def get_quarter_year(x):
@@ -301,14 +410,15 @@ def get_quarter_year(x):
 
 def town_sel_widget(town_options, key):
     town_selection = st.selectbox(
-        label='Towns', options=town_options, key=key
+        label='Town', options=town_options, key=key
     )
     return town_selection
 
 
 def flat_sel_widget(flat_options, key):
+    # TODO : Add tooltip on income ceiling for 3-Room flats
     flat_selection = st.selectbox(
-        label='Flat Types', options=flat_options, key=key
+        label='Flat Type', options=flat_options, key=key
     )
     return flat_selection
 
@@ -325,8 +435,10 @@ def get_additional_input(
 
 
 def get_column_info(
-        widget_info: Dict, widget_input: Dict, add_input: Dict,
+        widget_input: Dict, add_input: Dict,
         proj_info: pd.DataFrame, flat_info: pd.DataFrame,
+
+
 ):
     sel = (flat_info['flat_type'] == add_input['flat_selection'])
 
@@ -356,6 +468,7 @@ def render_content(
         with col:
 
             # TODO: Provide a more intuitive func name
+            st.header('Town & Flat Selector')
             add_input = get_additional_input(
                 town_options=widget_info['town_options'],
                 flat_options=widget_info['flat_options'],
@@ -364,56 +477,106 @@ def render_content(
             # Get additional options from main content widgets
             info_all, info_selected, info_not_selected, flat_info_selected =\
                 get_column_info(
-                    widget_info, widget_input, add_input,
+                    widget_input, add_input,
                     proj_info, flat_info)
 
-            df_floor = make_barchart_df_floor(
-                info_all, widget_input['min_floor'], widget_input['max_floor'])
+            if len(info_all) == 0:
+                st.error(
+                    textwrap.dedent(
+                        f"""
+                        **ERROR** :
+                        There is no {add_input['flat_selection']} flats
+                        for {add_input['town_selection']}.
+                        """
+                    )
+                )
+            else:
+                if len(info_selected) == 0:
+                    st.warning(
+                        '**WARNING** : None of the units fit the criteria.')
 
-            df_rem_lease = make_barchart_df_rem_lease(
-                info_all, widget_input['min_lease'], widget_input['max_lease'])
+                df_floor = make_barchart_df_floor(
+                    info_all,
+                    widget_input['min_floor'],
+                    widget_input['max_floor'])
 
-            df_price = make_barchart_df_price(
-                info_all, widget_input['min_price'], widget_input['max_price'])
+                df_rem_lease = make_barchart_df_rem_lease(
+                    info_all,
+                    widget_input['min_lease'],
+                    widget_input['max_lease'])
 
-            df_latest_comp = make_barchart_df_latest_comp(
-                info_all, widget_input['latest_comp'])
+                df_price = make_barchart_df_price(
+                    info_all,
+                    widget_input['min_price'],
+                    widget_input['max_price'])
 
-            # Tabulate all df required for charts/ markdown
-            crit_prop_df = make_crit_prop_df(
-                info_selected, info_all, flat_info_selected)
+                df_latest_comp = make_barchart_df_latest_comp(
+                    info_all, widget_input['latest_comp'])
 
-            chance_string = make_overall_chance_string(
-                crit_prop_df, app_info,
-                town=add_input['town_selection'],
-                flat_type=add_input['flat_selection']
-            )
+                # Tabulate all df required for charts/ markdown
+                crit_prop_df = make_crit_prop_df(
+                    info_selected, info_all, flat_info_selected)
 
-            bar_price_range = plot_bar(
-                df_price, x_col='Price Range (S$)',
-                y_col='No of Units', color_col='bin_group', label_angle=-45)
+                chance_string = make_overall_chance_string(
+                    crit_prop_df, app_info,
+                    town=add_input['town_selection'],
+                    flat_type=add_input['flat_selection']
+                )
 
-            bar_rem_lease = plot_bar(
-                df_rem_lease, x_col='Remaining Lease Years',
-                y_col='No of Units', color_col='bin_group', label_angle=-45)
+                bar_price_range = plot_bar(
+                    df_price, x_col='Price Range (S$)',
+                    y_col='No of Units',
+                    color_col='Unit Type', label_angle=-45)
 
-            bar_latest_comp = plot_bar(
-                df_latest_comp, x_col='Estimated Completion Date',
-                y_col='No of Units', color_col='bin_group', label_angle=-45)
+                bar_rem_lease = plot_bar(
+                    df_rem_lease, x_col='Remaining Lease Years',
+                    y_col='No of Units',
+                    color_col='Unit Type', label_angle=-45)
 
-            bar_floor = plot_bar(
-                df_floor, x_col='Floor', y_col='No of Units',
-                color_col='group')
+                bar_latest_comp = plot_bar(
+                    df_latest_comp, x_col='Estimated Completion Date',
+                    y_col='No of Units',
+                    color_col='Unit Type', label_angle=-45)
 
-            # # Test expander
-            # with st.beta_expander('Project 1'):
-            #     st.write('House | 1 2 3 | asdasd | 123')
-            #     st.write('House | 1 2 3 | asdasd | 123')
-            #     st.write('House | 1 2 3 | asdasd | 123')
+                bar_floor = plot_bar(
+                    df_floor, x_col='Floor', y_col='No of Units',
+                    color_col='Unit Type')
 
-            st.markdown(chance_string, unsafe_allow_html=True)
-            st.pyplot(plot_unit_within_crit_pie(crit_prop_df))
-            st.altair_chart(bar_price_range, use_container_width=True)
-            st.altair_chart(bar_rem_lease, use_container_width=True)
-            st.altair_chart(bar_floor, use_container_width=True)
-            st.altair_chart(bar_latest_comp, use_container_width=True)
+                st.header('Overview of Chances')
+                st.markdown(chance_string, unsafe_allow_html=True)
+
+                st.header('Breakdown of Units Within Criteria')
+                st.pyplot(plot_unit_within_crit_pie(crit_prop_df))
+
+                st.subheader('By Price Range')
+                st.altair_chart(bar_price_range, use_container_width=True)
+
+                st.subheader('By Remaining Lease')
+                st.altair_chart(bar_rem_lease, use_container_width=True)
+
+                st.subheader('By Floor Level')
+                st.altair_chart(bar_floor, use_container_width=True)
+
+                st.subheader('By Estimated Completion Date')
+                st.altair_chart(bar_latest_comp, use_container_width=True)
+
+                if len(info_selected) > 0:
+
+                    info_selected['unit_details'] = (
+                        info_selected.apply(
+                            lambda x: get_unit_details(
+                                x.floor_num, x.unit_num, x.unit_price),
+                            axis=1)
+                    )
+
+                    st.header('Project Details of Units within Criteria')
+                    st.text('Racial quota is not taken into consideration.')
+
+                    for precinct in sorted(
+                            info_selected['precinct_name'].unique()):
+
+                        html_table = make_precinct_html_table(
+                            info_selected, precinct)
+
+                        with st.beta_expander(precinct):
+                            st.markdown(html_table, unsafe_allow_html=True)

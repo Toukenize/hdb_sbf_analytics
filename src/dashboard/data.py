@@ -131,6 +131,10 @@ def get_app_info():
     sel = df_app_status['flat_type'].str.startswith('5-Room')
     df_app_status.loc[sel, 'flat_type'] = '5-Room'
 
+    # Remove income ceiling info from 3-Room flats (move to tooltip instead)
+    sel = df_app_status['flat_type'].str.startswith('3-Room')
+    df_app_status.loc[sel, 'flat_type'] = '3-Room'
+
     return df_app_status
 
 

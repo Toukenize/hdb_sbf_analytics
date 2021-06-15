@@ -11,7 +11,7 @@ SBF_PAGE_PREFIX = 'https://homes.hdb.gov.sg/home/sbf/details/'
 TABLE_3ROOM_ABV_COLS = ['town', 'flat_type', 'num_units', 'num_applicants',
                         'first_timers', 'second_timers', 'overall']
 
-DATA_FOLDER = Path('/home/chewzy/Personal/hdb/data')  # Change me
+DATA_FOLDER = Path('./data')  # Change me
 PROJ_INFO_PATH = DATA_FOLDER / 'SBF_project_info_v2.csv'
 BLOCK_INFO_PATH = DATA_FOLDER / 'SBF_block_info.csv'
 FLAT_INFO_PATH = DATA_FOLDER / 'SBF_flat_supply_info.csv'

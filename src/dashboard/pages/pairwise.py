@@ -165,7 +165,7 @@ def make_barchart_df_price(df, min_price, max_price):
 
     # Setting bins for unit price
     bin_min = df['unit_price'].min() // step_size * step_size
-    bin_max = df['unit_price'].max() // step_size * step_size + 1
+    bin_max = (df['unit_price'].max() // step_size + 1) * step_size + 1
 
     bins = np.arange(bin_min, bin_max, step_size)
     labels = [f'{i+1:.0f}-{i+step_size:.0f}k'

@@ -3,7 +3,7 @@
 This analytics dashboard was designed to estimate your chances of getting a SBF unit as a first timer in different towns of Singapore under different housing types based on your criterions:
 1. Ethnicity
 2. Budget range
-3. Desired loor levels
+3. Desired floor levels
 4. Remaining lease years of the unit
 5. The latest completion date you don't mind waiting until
 

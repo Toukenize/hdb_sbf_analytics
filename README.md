@@ -1,5 +1,9 @@
 # HDB Sales of Balances Flat Analytics (May 2021)
 
+
+https://user-images.githubusercontent.com/43180977/128908377-5ff0a65a-8970-4011-bfdb-b2e8b6ac1dac.mov
+
+
 This analytics dashboard was designed to estimate your chances of getting a SBF unit as a first timer in different towns of Singapore under different housing types based on your criterions:
 1. Ethnicity
 2. Budget range

@@ -10,9 +10,7 @@ from src.dashboard.sidebar import (
 )
 
 
-def show_dashboard(asd):
-
-    print(asd)
+def show_dashboard():
 
     st.set_page_config(
         layout="wide", page_title='SBF Analytics (May 2021 Exercise)')
